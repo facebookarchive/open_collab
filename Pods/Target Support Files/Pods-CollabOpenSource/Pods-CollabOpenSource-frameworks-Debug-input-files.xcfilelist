@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework
+${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
