@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Creation Launch Screen View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CreationLaunchScreen" id="Y6W-OH-hqX" customClass="CreationLaunchScreenViewController" customModule="CollabOpenSource" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epJ-k7-fwH" customClass="GradientView" customModule="CollabOpenSource">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Collab Open Source! Click the plus button to record a collab." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSt-c8-lo7">
+                                <rect key="frame" x="58" y="257" width="298" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gjb-EC-GGQ">
+                                <rect key="frame" x="127" y="398" width="160" height="100.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agl-Gk-zKU">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="aPZ-EI-JSe"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapCreateFromScratch:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Yzt-AD-AZd"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create new collab" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOj-zR-G5e">
+                                        <rect key="frame" x="0.0" y="80" width="160" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="FxU-Es-2xl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="epJ-k7-fwH" secondAttribute="bottom" id="0FT-1u-tZy"/>
+                            <constraint firstItem="PSt-c8-lo7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3IH-No-6CX"/>
+                            <constraint firstItem="epJ-k7-fwH" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="G07-TV-Feh"/>
+                            <constraint firstItem="Gjb-EC-GGQ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="nUd-1N-Kyx"/>
+                            <constraint firstAttribute="trailing" secondItem="epJ-k7-fwH" secondAttribute="trailing" id="o5d-s3-gHz"/>
+                            <constraint firstItem="Gjb-EC-GGQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="sxe-A4-UPu"/>
+                            <constraint firstItem="Gjb-EC-GGQ" firstAttribute="top" secondItem="PSt-c8-lo7" secondAttribute="bottom" constant="100" id="ucl-Ki-aL9"/>
+                            <constraint firstItem="epJ-k7-fwH" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="wTf-A0-Z2N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createButton" destination="agl-Gk-zKU" id="ovU-Su-DqK"/>
+                        <outlet property="createButtonText" destination="fOj-zR-G5e" id="o0V-0i-9IZ"/>
+                        <outlet property="creationStackView" destination="Gjb-EC-GGQ" id="Xr0-VP-VwN"/>
+                        <outlet property="gradientView" destination="epJ-k7-fwH" id="dYk-Qo-Uyu"/>
+                        <outlet property="welcomeLabel" destination="PSt-c8-lo7" id="5Lf-vI-SKZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Hsn-8h-rSt">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="HEU-RB-pDR" customClass="SettingsViewController" customModule="CollabOpenSource" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iuw-yZ-6fL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Upn-wK-80r">
+                                <rect key="frame" x="24" y="56" width="366" height="137.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANj-VC-JSf">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYv-9L-LcR">
+                                        <rect key="frame" x="0.0" y="45.5" width="366" height="6"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="6" id="g7u-ci-gCc"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZ9-U0-1GV">
+                                        <rect key="frame" x="0.0" y="63.5" width="366" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mirror camera while recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmN-LE-BRA">
+                                                <rect key="frame" x="0.0" y="0.0" width="317" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QEO-d8-u7K">
+                                                <rect key="frame" x="317" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="didChangeMirroringEnabledSwitch:" destination="HEU-RB-pDR" eventType="valueChanged" id="Df3-Xr-pGu"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHN-Ru-BQn">
+                                        <rect key="frame" x="0.0" y="106.5" width="366" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow uploading from camera roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2m-8G-q1z">
+                                                <rect key="frame" x="0.0" y="0.0" width="317" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22m-yF-wky">
+                                                <rect key="frame" x="317" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="didChangeUploadFromCameraRollEnabledSwitch:" destination="HEU-RB-pDR" eventType="valueChanged" id="iU0-aI-ehB"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gnw-8o-o1e"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.38039215686274508" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Upn-wK-80r" firstAttribute="top" secondItem="Gnw-8o-o1e" secondAttribute="top" constant="12" id="22H-6j-LDC"/>
+                            <constraint firstItem="Gnw-8o-o1e" firstAttribute="trailing" secondItem="Upn-wK-80r" secondAttribute="trailing" constant="24" id="3z7-oK-hI5"/>
+                            <constraint firstItem="Upn-wK-80r" firstAttribute="leading" secondItem="Gnw-8o-o1e" secondAttribute="leading" constant="24" id="BFc-QS-4XK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mirroringEnabledSwitch" destination="QEO-d8-u7K" id="eyf-zC-isw"/>
+                        <outlet property="stackView" destination="Upn-wK-80r" id="IY1-Ks-Iya"/>
+                        <outlet property="uploadFromCameraRollEnabledSwitch" destination="22m-yF-wky" id="iBK-VJ-ZtP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWl-z6-JOL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-381" y="-565"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

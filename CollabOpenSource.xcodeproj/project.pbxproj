@@ -1,0 +1,897 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77DFE121D27E9F8B553E157D /* Pods_CollabOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2FBE05E23AE9A73DC5BAB62 /* Pods_CollabOpenSource.framework */; };
+		DFAFFC6827B19DAA00584844 /* CreationLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC6727B19DAA00584844 /* CreationLaunchScreenViewController.swift */; };
+		DFAFFC6A27B1A68E00584844 /* InitialRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC6927B1A68E00584844 /* InitialRecordViewController.swift */; };
+		DFAFFC6C27B1A89800584844 /* AspectRatioCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC6B27B1A89800584844 /* AspectRatioCalculator.swift */; };
+		DFAFFC6F27B1A9A300584844 /* RecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC6E27B1A9A300584844 /* RecordButtonView.swift */; };
+		DFAFFC7127B1AA4600584844 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC7027B1AA4600584844 /* GradientView.swift */; };
+		DFAFFC7327B1AAFF00584844 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC7227B1AAFF00584844 /* SpinnerView.swift */; };
+		DFAFFC7527B1AB5E00584844 /* BeatSnapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC7427B1AB5E00584844 /* BeatSnapper.swift */; };
+		DFAFFC7727B1AB8800584844 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC7627B1AB8800584844 /* UIExtensions.swift */; };
+		DFAFFC7927B1ADD900584844 /* RecordActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC7827B1ADD900584844 /* RecordActionViewController.swift */; };
+		DFAFFC7B27B1B0B300584844 /* MetronomeEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC7A27B1B0B300584844 /* MetronomeEditViewController.swift */; };
+		DFAFFC8027B1B49A00584844 /* PlaybackCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC7F27B1B49A00584844 /* PlaybackCoordinator.swift */; };
+		DFAFFC8427B1B7F000584844 /* FragmentHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC8327B1B7F000584844 /* FragmentHost.swift */; };
+		DFAFFC8627B1B8AC00584844 /* AssetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC8527B1B8AC00584844 /* AssetInfo.swift */; };
+		DFAFFC8827B1BA2600584844 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC8727B1BA2600584844 /* APIModel.swift */; };
+		DFAFFC8A27B1BE5B00584844 /* FragmentPlaybackChangeAnnouncerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC8927B1BE5B00584844 /* FragmentPlaybackChangeAnnouncerListener.swift */; };
+		DFAFFC8C27B1BE8600584844 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC8B27B1BE8600584844 /* MulticastDelegate.swift */; };
+		DFAFFC8E27B1BF3600584844 /* AssetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC8D27B1BF3600584844 /* AssetError.swift */; };
+		DFAFFC9027B1C03B00584844 /* AVPlayerHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC8F27B1C03B00584844 /* AVPlayerHostView.swift */; };
+		DFAFFC9227B1C1AE00584844 /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC9127B1C1AE00584844 /* AVPlayerView.swift */; };
+		DFAFFC9427B1C3F000584844 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC9327B1C3F000584844 /* Extensions.swift */; };
+		DFAFFC9627B1C78900584844 /* CollabColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC9527B1C78900584844 /* CollabColors.swift */; };
+		DFAFFC9827B1C8B900584844 /* QueuePlayerLooper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC9727B1C8B900584844 /* QueuePlayerLooper.swift */; };
+		DFAFFC9A27B1C94400584844 /* Looper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC9927B1C94400584844 /* Looper.swift */; };
+		DFAFFC9C27B1CA3F00584844 /* HotPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC9B27B1CA3F00584844 /* HotPlayer.swift */; };
+		DFAFFC9E27B1CA9A00584844 /* ObservablePlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC9D27B1CA9A00584844 /* ObservablePlayerItem.swift */; };
+		DFAFFCA027B1CB0000584844 /* InstrumentedAVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC9F27B1CB0000584844 /* InstrumentedAVPlayer.swift */; };
+		DFAFFCA227B1CB3C00584844 /* InstrumentedPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCA127B1CB3C00584844 /* InstrumentedPlayer.swift */; };
+		DFAFFCA427B1CDF900584844 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCA327B1CDF900584844 /* WeakRef.swift */; };
+		DFAFFCA627B1CEAA00584844 /* HotLooper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCA527B1CEAA00584844 /* HotLooper.swift */; };
+		DFAFFCA827B1CF2300584844 /* CoordinatedLooperGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCA727B1CF2300584844 /* CoordinatedLooperGroup.swift */; };
+		DFAFFCAA27B1CFC000584844 /* FragmentDataModelEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCA927B1CFC000584844 /* FragmentDataModelEventHandler.swift */; };
+		DFAFFCAC27B1D11E00584844 /* PlaybackDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCAB27B1D11E00584844 /* PlaybackDataModel.swift */; };
+		DFAFFCAE27B1D8DF00584844 /* LocalAssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCAD27B1D8DF00584844 /* LocalAssetManager.swift */; };
+		DFAFFCB027B1DED200584844 /* CreationRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCAF27B1DED200584844 /* CreationRecordViewController.swift */; };
+		DFAFFCB227B1DF4100584844 /* FragmentCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCB127B1DF4100584844 /* FragmentCreationViewController.swift */; };
+		DFAFFCB427B1E0F100584844 /* VolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCB327B1E0F100584844 /* VolumeViewController.swift */; };
+		DFAFFCB627B1E2BD00584844 /* FragmentLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCB527B1E2BD00584844 /* FragmentLabelView.swift */; };
+		DFAFFCB827B1E31F00584844 /* GradientLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCB727B1E31F00584844 /* GradientLoadingView.swift */; };
+		DFAFFCBA27B1E3F900584844 /* NudgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCB927B1E3F900584844 /* NudgeViewController.swift */; };
+		DFAFFCBC27B1E4F400584844 /* PlaybackEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCBB27B1E4F400584844 /* PlaybackEditor.swift */; };
+		DFAFFCBE27B1E76800584844 /* TakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCBD27B1E76800584844 /* TakeViewController.swift */; };
+		DFAFFCC027B1E7A500584844 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCBF27B1E7A500584844 /* CaptureViewController.swift */; };
+		DFAFFCC227B1EA4C00584844 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCC127B1EA4C00584844 /* FileUtil.swift */; };
+		DFAFFCC427B1ECFF00584844 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCC327B1ECFF00584844 /* PreviewView.swift */; };
+		DFAFFCC627B1EDF300584844 /* AssetRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCC527B1EDF300584844 /* AssetRecorder.swift */; };
+		DFAFFCC827B1EE8C00584844 /* AssetReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCC727B1EE8C00584844 /* AssetReader.swift */; };
+		DFAFFCCC27B1F08000584844 /* TakeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCCB27B1F08000584844 /* TakeGenerator.swift */; };
+		DFAFFCCE27B1F13500584844 /* AssetCopier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCCD27B1F13500584844 /* AssetCopier.swift */; };
+		DFAFFCD027B1F27E00584844 /* AssetComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCCF27B1F27E00584844 /* AssetComposer.swift */; };
+		DFAFFCD227B1F41D00584844 /* CollabRasterizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCD127B1F41D00584844 /* CollabRasterizer.swift */; };
+		DFAFFCD427B1F51900584844 /* ClickTrackComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCD327B1F51900584844 /* ClickTrackComposer.swift */; };
+		DFAFFCD827B1F89700584844 /* CollabCaptureDeviceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCD727B1F89700584844 /* CollabCaptureDeviceConfigurator.m */; };
+		DFAFFCDA27B31D2E00584844 /* RecordingAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCD927B31D2E00584844 /* RecordingAuthorizer.swift */; };
+		DFAFFCDC27B345DD00584844 /* MetronomeHeadphoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFAFFCDB27B345DD00584844 /* MetronomeHeadphoneView.xib */; };
+		DFAFFCDE27B3471000584844 /* UnmuteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFAFFCDD27B3471000584844 /* UnmuteView.xib */; };
+		DFAFFCE027B3479000584844 /* NudgeTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFAFFCDF27B3479000584844 /* NudgeTitleView.xib */; };
+		DFAFFCE227B3481800584844 /* clickStandard.wav in Resources */ = {isa = PBXBuildFile; fileRef = DFAFFCE127B3481800584844 /* clickStandard.wav */; };
+		DFAFFCE427B3484D00584844 /* clickAccent.wav in Resources */ = {isa = PBXBuildFile; fileRef = DFAFFCE327B3484D00584844 /* clickAccent.wav */; };
+		DFAFFCE627B34C7900584844 /* TrimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCE527B34C7900584844 /* TrimViewController.swift */; };
+		DFAFFCEC27B34E5F00584844 /* WaveformTrimmerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCEB27B34E5F00584844 /* WaveformTrimmerViewController.swift */; };
+		DFAFFCEE27B34ED700584844 /* WaveformTrimmerSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCED27B34ED700584844 /* WaveformTrimmerSliderView.swift */; };
+		DFAFFCF027B34F0700584844 /* TrimmerSliderHandleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCEF27B34F0700584844 /* TrimmerSliderHandleView.swift */; };
+		DFAFFCF227B34F5A00584844 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCF127B34F5A00584844 /* ProgressIndicator.swift */; };
+		DFAFFCF427B41E8C00584844 /* FDWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCF327B41E8C00584844 /* FDWaveformView.swift */; };
+		DFAFFCF627B41EB600584844 /* FDAudioContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCF527B41EB600584844 /* FDAudioContext.swift */; };
+		DFAFFCF827B41EEE00584844 /* FDWaveformRenderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCF727B41EEE00584844 /* FDWaveformRenderOperation.swift */; };
+		DFAFFCFA27B41F7D00584844 /* TrimEditLoopingVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCF927B41F7D00584844 /* TrimEditLoopingVideoView.swift */; };
+		DFAFFCFC27B41FDD00584844 /* CollabTrimmerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCFB27B41FDD00584844 /* CollabTrimmerViewController.swift */; };
+		DFAFFCFE27B43B4F00584844 /* RemixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCFD27B43B4F00584844 /* RemixViewController.swift */; };
+		DFAFFD0027B43EE600584844 /* SlideshowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFCFF27B43EE600584844 /* SlideshowViewController.swift */; };
+		DFAFFD0327B43FE700584844 /* CollabScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD0227B43FE700584844 /* CollabScrollView.swift */; };
+		DFAFFD0527B4422600584844 /* RemixTrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD0427B4422600584844 /* RemixTrayViewController.swift */; };
+		DFAFFD0727B4427000584844 /* RadioTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD0627B4427000584844 /* RadioTabView.swift */; };
+		DFAFFD0927B4429400584844 /* RadioTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD0827B4429400584844 /* RadioTabBarViewController.swift */; };
+		DFAFFD0B27B4463000584844 /* ClipsTrayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD0A27B4463000584844 /* ClipsTrayCollectionViewController.swift */; };
+		DFAFFD0D27B4466A00584844 /* ClipsTrayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD0C27B4466A00584844 /* ClipsTrayCollectionViewCell.swift */; };
+		DFAFFD0F27B4481700584844 /* LayoutEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD0E27B4481700584844 /* LayoutEngineViewController.swift */; };
+		DFAFFD1127B4489F00584844 /* MulticlipType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD1027B4489F00584844 /* MulticlipType.swift */; };
+		DFAFFD1527B44AA000584844 /* CollabAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD1427B44AA000584844 /* CollabAlertViewController.swift */; };
+		DFAFFD1927B44B9D00584844 /* DimmablePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD1827B44B9D00584844 /* DimmablePresentationController.swift */; };
+		DFAFFD1C27B44C5F00584844 /* DimOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD1B27B44C5F00584844 /* DimOverlayView.swift */; };
+		DFAFFD1E27B45A5A00584844 /* AppMuteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD1D27B45A5A00584844 /* AppMuteManager.swift */; };
+		DFAFFD2027B4910F00584844 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD1F27B4910F00584844 /* PublishViewController.swift */; };
+		DFAFFD2627B6C47A00584844 /* OverlayProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD2527B6C47A00584844 /* OverlayProgressView.swift */; };
+		DFAFFD2827BAF28700584844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAFFD2727BAF28700584844 /* Main.storyboard */; };
+		DFAFFD2A27BAFE0000584844 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD2927BAFE0000584844 /* SettingsViewController.swift */; };
+		DFFA0A2327AB8B0200DD73EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA0A2227AB8B0200DD73EA /* AppDelegate.swift */; };
+		DFFA0A2C27AB8B0500DD73EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFFA0A2B27AB8B0500DD73EA /* Assets.xcassets */; };
+		DFFA0A2F27AB8B0500DD73EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA0A2D27AB8B0500DD73EA /* LaunchScreen.storyboard */; };
+		DFFA0A3A27AB9ECD00DD73EA /* AppHeadphoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA0A3927AB9ECD00DD73EA /* AppHeadphoneManager.swift */; };
+		DFFA0A4227ADD34A00DD73EA /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA0A4127ADD34A00DD73EA /* Alert.swift */; };
+		DFFA0A4427B18CAE00DD73EA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFA0A4327B18CAE00DD73EA /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24B55E01BA8ACA85862CC433 /* Pods-CollabOpenSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollabOpenSource.release.xcconfig"; path = "Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource.release.xcconfig"; sourceTree = "<group>"; };
+		CD4C7A443E86ACDB56D981AF /* Pods-CollabOpenSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollabOpenSource.debug.xcconfig"; path = "Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource.debug.xcconfig"; sourceTree = "<group>"; };
+		D2FBE05E23AE9A73DC5BAB62 /* Pods_CollabOpenSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollabOpenSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFAFFC6727B19DAA00584844 /* CreationLaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationLaunchScreenViewController.swift; sourceTree = "<group>"; };
+		DFAFFC6927B1A68E00584844 /* InitialRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRecordViewController.swift; sourceTree = "<group>"; };
+		DFAFFC6B27B1A89800584844 /* AspectRatioCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectRatioCalculator.swift; sourceTree = "<group>"; };
+		DFAFFC6E27B1A9A300584844 /* RecordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonView.swift; sourceTree = "<group>"; };
+		DFAFFC7027B1AA4600584844 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		DFAFFC7227B1AAFF00584844 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		DFAFFC7427B1AB5E00584844 /* BeatSnapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatSnapper.swift; sourceTree = "<group>"; };
+		DFAFFC7627B1AB8800584844 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		DFAFFC7827B1ADD900584844 /* RecordActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordActionViewController.swift; sourceTree = "<group>"; };
+		DFAFFC7A27B1B0B300584844 /* MetronomeEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeEditViewController.swift; sourceTree = "<group>"; };
+		DFAFFC7F27B1B49A00584844 /* PlaybackCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackCoordinator.swift; sourceTree = "<group>"; };
+		DFAFFC8327B1B7F000584844 /* FragmentHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentHost.swift; sourceTree = "<group>"; };
+		DFAFFC8527B1B8AC00584844 /* AssetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetInfo.swift; sourceTree = "<group>"; };
+		DFAFFC8727B1BA2600584844 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		DFAFFC8927B1BE5B00584844 /* FragmentPlaybackChangeAnnouncerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentPlaybackChangeAnnouncerListener.swift; sourceTree = "<group>"; };
+		DFAFFC8B27B1BE8600584844 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		DFAFFC8D27B1BF3600584844 /* AssetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetError.swift; sourceTree = "<group>"; };
+		DFAFFC8F27B1C03B00584844 /* AVPlayerHostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerHostView.swift; sourceTree = "<group>"; };
+		DFAFFC9127B1C1AE00584844 /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
+		DFAFFC9327B1C3F000584844 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DFAFFC9527B1C78900584844 /* CollabColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabColors.swift; sourceTree = "<group>"; };
+		DFAFFC9727B1C8B900584844 /* QueuePlayerLooper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuePlayerLooper.swift; sourceTree = "<group>"; };
+		DFAFFC9927B1C94400584844 /* Looper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Looper.swift; sourceTree = "<group>"; };
+		DFAFFC9B27B1CA3F00584844 /* HotPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPlayer.swift; sourceTree = "<group>"; };
+		DFAFFC9D27B1CA9A00584844 /* ObservablePlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablePlayerItem.swift; sourceTree = "<group>"; };
+		DFAFFC9F27B1CB0000584844 /* InstrumentedAVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentedAVPlayer.swift; sourceTree = "<group>"; };
+		DFAFFCA127B1CB3C00584844 /* InstrumentedPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentedPlayer.swift; sourceTree = "<group>"; };
+		DFAFFCA327B1CDF900584844 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
+		DFAFFCA527B1CEAA00584844 /* HotLooper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotLooper.swift; sourceTree = "<group>"; };
+		DFAFFCA727B1CF2300584844 /* CoordinatedLooperGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedLooperGroup.swift; sourceTree = "<group>"; };
+		DFAFFCA927B1CFC000584844 /* FragmentDataModelEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentDataModelEventHandler.swift; sourceTree = "<group>"; };
+		DFAFFCAB27B1D11E00584844 /* PlaybackDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackDataModel.swift; sourceTree = "<group>"; };
+		DFAFFCAD27B1D8DF00584844 /* LocalAssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAssetManager.swift; sourceTree = "<group>"; };
+		DFAFFCAF27B1DED200584844 /* CreationRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationRecordViewController.swift; sourceTree = "<group>"; };
+		DFAFFCB127B1DF4100584844 /* FragmentCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentCreationViewController.swift; sourceTree = "<group>"; };
+		DFAFFCB327B1E0F100584844 /* VolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeViewController.swift; sourceTree = "<group>"; };
+		DFAFFCB527B1E2BD00584844 /* FragmentLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentLabelView.swift; sourceTree = "<group>"; };
+		DFAFFCB727B1E31F00584844 /* GradientLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingView.swift; sourceTree = "<group>"; };
+		DFAFFCB927B1E3F900584844 /* NudgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NudgeViewController.swift; sourceTree = "<group>"; };
+		DFAFFCBB27B1E4F400584844 /* PlaybackEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackEditor.swift; sourceTree = "<group>"; };
+		DFAFFCBD27B1E76800584844 /* TakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeViewController.swift; sourceTree = "<group>"; };
+		DFAFFCBF27B1E7A500584844 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
+		DFAFFCC127B1EA4C00584844 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
+		DFAFFCC327B1ECFF00584844 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		DFAFFCC527B1EDF300584844 /* AssetRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRecorder.swift; sourceTree = "<group>"; };
+		DFAFFCC727B1EE8C00584844 /* AssetReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetReader.swift; sourceTree = "<group>"; };
+		DFAFFCCB27B1F08000584844 /* TakeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeGenerator.swift; sourceTree = "<group>"; };
+		DFAFFCCD27B1F13500584844 /* AssetCopier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCopier.swift; sourceTree = "<group>"; };
+		DFAFFCCF27B1F27E00584844 /* AssetComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetComposer.swift; sourceTree = "<group>"; };
+		DFAFFCD127B1F41D00584844 /* CollabRasterizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabRasterizer.swift; sourceTree = "<group>"; };
+		DFAFFCD327B1F51900584844 /* ClickTrackComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickTrackComposer.swift; sourceTree = "<group>"; };
+		DFAFFCD527B1F84400584844 /* CollabCaptureDeviceConfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollabCaptureDeviceConfigurator.h; sourceTree = "<group>"; };
+		DFAFFCD627B1F89700584844 /* CollabOpenSource-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CollabOpenSource-Bridging-Header.h"; sourceTree = "<group>"; };
+		DFAFFCD727B1F89700584844 /* CollabCaptureDeviceConfigurator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollabCaptureDeviceConfigurator.m; sourceTree = "<group>"; };
+		DFAFFCD927B31D2E00584844 /* RecordingAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAuthorizer.swift; sourceTree = "<group>"; };
+		DFAFFCDB27B345DD00584844 /* MetronomeHeadphoneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetronomeHeadphoneView.xib; sourceTree = "<group>"; };
+		DFAFFCDD27B3471000584844 /* UnmuteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnmuteView.xib; sourceTree = "<group>"; };
+		DFAFFCDF27B3479000584844 /* NudgeTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NudgeTitleView.xib; sourceTree = "<group>"; };
+		DFAFFCE127B3481800584844 /* clickStandard.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickStandard.wav; sourceTree = "<group>"; };
+		DFAFFCE327B3484D00584844 /* clickAccent.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickAccent.wav; sourceTree = "<group>"; };
+		DFAFFCE527B34C7900584844 /* TrimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimViewController.swift; sourceTree = "<group>"; };
+		DFAFFCEB27B34E5F00584844 /* WaveformTrimmerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformTrimmerViewController.swift; sourceTree = "<group>"; };
+		DFAFFCED27B34ED700584844 /* WaveformTrimmerSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformTrimmerSliderView.swift; sourceTree = "<group>"; };
+		DFAFFCEF27B34F0700584844 /* TrimmerSliderHandleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimmerSliderHandleView.swift; sourceTree = "<group>"; };
+		DFAFFCF127B34F5A00584844 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		DFAFFCF327B41E8C00584844 /* FDWaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDWaveformView.swift; sourceTree = "<group>"; };
+		DFAFFCF527B41EB600584844 /* FDAudioContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDAudioContext.swift; sourceTree = "<group>"; };
+		DFAFFCF727B41EEE00584844 /* FDWaveformRenderOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDWaveformRenderOperation.swift; sourceTree = "<group>"; };
+		DFAFFCF927B41F7D00584844 /* TrimEditLoopingVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimEditLoopingVideoView.swift; sourceTree = "<group>"; };
+		DFAFFCFB27B41FDD00584844 /* CollabTrimmerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabTrimmerViewController.swift; sourceTree = "<group>"; };
+		DFAFFCFD27B43B4F00584844 /* RemixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemixViewController.swift; sourceTree = "<group>"; };
+		DFAFFCFF27B43EE600584844 /* SlideshowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideshowViewController.swift; sourceTree = "<group>"; };
+		DFAFFD0227B43FE700584844 /* CollabScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabScrollView.swift; sourceTree = "<group>"; };
+		DFAFFD0427B4422600584844 /* RemixTrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemixTrayViewController.swift; sourceTree = "<group>"; };
+		DFAFFD0627B4427000584844 /* RadioTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTabView.swift; sourceTree = "<group>"; };
+		DFAFFD0827B4429400584844 /* RadioTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTabBarViewController.swift; sourceTree = "<group>"; };
+		DFAFFD0A27B4463000584844 /* ClipsTrayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsTrayCollectionViewController.swift; sourceTree = "<group>"; };
+		DFAFFD0C27B4466A00584844 /* ClipsTrayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsTrayCollectionViewCell.swift; sourceTree = "<group>"; };
+		DFAFFD0E27B4481700584844 /* LayoutEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutEngineViewController.swift; sourceTree = "<group>"; };
+		DFAFFD1027B4489F00584844 /* MulticlipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticlipType.swift; sourceTree = "<group>"; };
+		DFAFFD1427B44AA000584844 /* CollabAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabAlertViewController.swift; sourceTree = "<group>"; };
+		DFAFFD1827B44B9D00584844 /* DimmablePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmablePresentationController.swift; sourceTree = "<group>"; };
+		DFAFFD1B27B44C5F00584844 /* DimOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimOverlayView.swift; sourceTree = "<group>"; };
+		DFAFFD1D27B45A5A00584844 /* AppMuteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMuteManager.swift; sourceTree = "<group>"; };
+		DFAFFD1F27B4910F00584844 /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
+		DFAFFD2527B6C47A00584844 /* OverlayProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayProgressView.swift; sourceTree = "<group>"; };
+		DFAFFD2727BAF28700584844 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DFAFFD2927BAFE0000584844 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DFAFFD2B27BB1FCD00584844 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DFAFFD2C27BB22DF00584844 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		DFAFFD2D27BB236700584844 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		DFAFFD2E27BB24C500584844 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		DFFA0A1F27AB8B0200DD73EA /* CollabOpenSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollabOpenSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFA0A2227AB8B0200DD73EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFFA0A2B27AB8B0500DD73EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFFA0A2E27AB8B0500DD73EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFFA0A3027AB8B0500DD73EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFA0A3927AB9ECD00DD73EA /* AppHeadphoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHeadphoneManager.swift; sourceTree = "<group>"; };
+		DFFA0A4127ADD34A00DD73EA /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		DFFA0A4327B18CAE00DD73EA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFFA0A1C27AB8B0200DD73EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFFA0A4427B18CAE00DD73EA /* AVFoundation.framework in Frameworks */,
+				77DFE121D27E9F8B553E157D /* Pods_CollabOpenSource.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16724090DEE25AC349A037DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD4C7A443E86ACDB56D981AF /* Pods-CollabOpenSource.debug.xcconfig */,
+				24B55E01BA8ACA85862CC433 /* Pods-CollabOpenSource.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA4EC97DFADD4C48678439C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA0A4327B18CAE00DD73EA /* AVFoundation.framework */,
+				D2FBE05E23AE9A73DC5BAB62 /* Pods_CollabOpenSource.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFAFFC6D27B1A97200584844 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFC6E27B1A9A300584844 /* RecordButtonView.swift */,
+				DFAFFC7027B1AA4600584844 /* GradientView.swift */,
+				DFAFFC7227B1AAFF00584844 /* SpinnerView.swift */,
+				DFAFFCB527B1E2BD00584844 /* FragmentLabelView.swift */,
+				DFAFFCB727B1E31F00584844 /* GradientLoadingView.swift */,
+				DFAFFD1B27B44C5F00584844 /* DimOverlayView.swift */,
+				DFAFFD2527B6C47A00584844 /* OverlayProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFAFFC7E27B1B48300584844 /* VideoPlayback */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFC7F27B1B49A00584844 /* PlaybackCoordinator.swift */,
+				DFAFFC8327B1B7F000584844 /* FragmentHost.swift */,
+				DFAFFC8927B1BE5B00584844 /* FragmentPlaybackChangeAnnouncerListener.swift */,
+				DFAFFC8F27B1C03B00584844 /* AVPlayerHostView.swift */,
+				DFAFFC9127B1C1AE00584844 /* AVPlayerView.swift */,
+				DFAFFC9727B1C8B900584844 /* QueuePlayerLooper.swift */,
+				DFAFFC9927B1C94400584844 /* Looper.swift */,
+				DFAFFC9B27B1CA3F00584844 /* HotPlayer.swift */,
+				DFAFFC9D27B1CA9A00584844 /* ObservablePlayerItem.swift */,
+				DFAFFC9F27B1CB0000584844 /* InstrumentedAVPlayer.swift */,
+				DFAFFCA127B1CB3C00584844 /* InstrumentedPlayer.swift */,
+				DFAFFCA527B1CEAA00584844 /* HotLooper.swift */,
+				DFAFFCA727B1CF2300584844 /* CoordinatedLooperGroup.swift */,
+				DFAFFCBB27B1E4F400584844 /* PlaybackEditor.swift */,
+			);
+			path = VideoPlayback;
+			sourceTree = "<group>";
+		};
+		DFAFFCC927B1F00500584844 /* RecordingSupport */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFCC327B1ECFF00584844 /* PreviewView.swift */,
+				DFAFFCC727B1EE8C00584844 /* AssetReader.swift */,
+				DFAFFCC527B1EDF300584844 /* AssetRecorder.swift */,
+				DFAFFCCB27B1F08000584844 /* TakeGenerator.swift */,
+				DFAFFCCD27B1F13500584844 /* AssetCopier.swift */,
+				DFAFFCCF27B1F27E00584844 /* AssetComposer.swift */,
+				DFAFFCD527B1F84400584844 /* CollabCaptureDeviceConfigurator.h */,
+				DFAFFCD727B1F89700584844 /* CollabCaptureDeviceConfigurator.m */,
+				DFAFFCD927B31D2E00584844 /* RecordingAuthorizer.swift */,
+			);
+			path = RecordingSupport;
+			sourceTree = "<group>";
+		};
+		DFAFFCE727B34DDD00584844 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFC8727B1BA2600584844 /* APIModel.swift */,
+				DFAFFCAB27B1D11E00584844 /* PlaybackDataModel.swift */,
+				DFAFFCA927B1CFC000584844 /* FragmentDataModelEventHandler.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DFAFFCEA27B34E4800584844 /* TrimmingSupport */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFCEB27B34E5F00584844 /* WaveformTrimmerViewController.swift */,
+				DFAFFCED27B34ED700584844 /* WaveformTrimmerSliderView.swift */,
+				DFAFFCEF27B34F0700584844 /* TrimmerSliderHandleView.swift */,
+				DFAFFCF127B34F5A00584844 /* ProgressIndicator.swift */,
+				DFAFFCF327B41E8C00584844 /* FDWaveformView.swift */,
+				DFAFFCF527B41EB600584844 /* FDAudioContext.swift */,
+				DFAFFCF727B41EEE00584844 /* FDWaveformRenderOperation.swift */,
+				DFAFFCF927B41F7D00584844 /* TrimEditLoopingVideoView.swift */,
+			);
+			path = TrimmingSupport;
+			sourceTree = "<group>";
+		};
+		DFAFFD0127B43F4100584844 /* RemixSupport */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFCFF27B43EE600584844 /* SlideshowViewController.swift */,
+				DFAFFD0227B43FE700584844 /* CollabScrollView.swift */,
+				DFAFFD0427B4422600584844 /* RemixTrayViewController.swift */,
+				DFAFFD0A27B4463000584844 /* ClipsTrayCollectionViewController.swift */,
+				DFAFFD0C27B4466A00584844 /* ClipsTrayCollectionViewCell.swift */,
+				DFAFFD0E27B4481700584844 /* LayoutEngineViewController.swift */,
+				DFAFFD1027B4489F00584844 /* MulticlipType.swift */,
+			);
+			path = RemixSupport;
+			sourceTree = "<group>";
+		};
+		DFAFFD1A27B44BAB00584844 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFD1827B44B9D00584844 /* DimmablePresentationController.swift */,
+				DFAFFD1427B44AA000584844 /* CollabAlertViewController.swift */,
+				DFAFFD0827B4429400584844 /* RadioTabBarViewController.swift */,
+				DFAFFD0627B4427000584844 /* RadioTabView.swift */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		DFFA0A1627AB8B0200DD73EA = {
+			isa = PBXGroup;
+			children = (
+				DFFA0A2127AB8B0200DD73EA /* CollabOpenSource */,
+				DFFA0A2027AB8B0200DD73EA /* Products */,
+				16724090DEE25AC349A037DA /* Pods */,
+				BA4EC97DFADD4C48678439C9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DFFA0A2027AB8B0200DD73EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA0A1F27AB8B0200DD73EA /* CollabOpenSource.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFFA0A2127AB8B0200DD73EA /* CollabOpenSource */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA0A3627AB972700DD73EA /* Sources */,
+				DFFA0A3727AB974300DD73EA /* Resources */,
+				DFFA0A3027AB8B0500DD73EA /* Info.plist */,
+				DFAFFD2B27BB1FCD00584844 /* README.md */,
+				DFAFFD2D27BB236700584844 /* CHANGELOG.md */,
+				DFAFFD2E27BB24C500584844 /* CODE_OF_CONDUCT.md */,
+				DFAFFD2C27BB22DF00584844 /* CONTRIBUTING.md */,
+			);
+			path = CollabOpenSource;
+			sourceTree = "<group>";
+		};
+		DFFA0A3627AB972700DD73EA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFD1A27B44BAB00584844 /* CustomComponents */,
+				DFAFFD0127B43F4100584844 /* RemixSupport */,
+				DFAFFCEA27B34E4800584844 /* TrimmingSupport */,
+				DFAFFCE727B34DDD00584844 /* Models */,
+				DFAFFCC927B1F00500584844 /* RecordingSupport */,
+				DFFA0A2227AB8B0200DD73EA /* AppDelegate.swift */,
+				DFAFFC6727B19DAA00584844 /* CreationLaunchScreenViewController.swift */,
+				DFAFFCD627B1F89700584844 /* CollabOpenSource-Bridging-Header.h */,
+				DFAFFC7E27B1B48300584844 /* VideoPlayback */,
+				DFAFFC6D27B1A97200584844 /* Views */,
+				DFFA0A4027ADD33E00DD73EA /* Util */,
+				DFFA0A3827AB9EA700DD73EA /* ViewControllers */,
+				DFAFFCAD27B1D8DF00584844 /* LocalAssetManager.swift */,
+				DFAFFCD127B1F41D00584844 /* CollabRasterizer.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DFFA0A3727AB974300DD73EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFCE327B3484D00584844 /* clickAccent.wav */,
+				DFAFFCE127B3481800584844 /* clickStandard.wav */,
+				DFFA0A2D27AB8B0500DD73EA /* LaunchScreen.storyboard */,
+				DFFA0A2B27AB8B0500DD73EA /* Assets.xcassets */,
+				DFAFFCDB27B345DD00584844 /* MetronomeHeadphoneView.xib */,
+				DFAFFCDD27B3471000584844 /* UnmuteView.xib */,
+				DFAFFCDF27B3479000584844 /* NudgeTitleView.xib */,
+				DFAFFD2727BAF28700584844 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DFFA0A3827AB9EA700DD73EA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFAFFC6927B1A68E00584844 /* InitialRecordViewController.swift */,
+				DFAFFC7827B1ADD900584844 /* RecordActionViewController.swift */,
+				DFAFFC7A27B1B0B300584844 /* MetronomeEditViewController.swift */,
+				DFAFFCAF27B1DED200584844 /* CreationRecordViewController.swift */,
+				DFAFFCB127B1DF4100584844 /* FragmentCreationViewController.swift */,
+				DFAFFCB327B1E0F100584844 /* VolumeViewController.swift */,
+				DFAFFCB927B1E3F900584844 /* NudgeViewController.swift */,
+				DFAFFCBD27B1E76800584844 /* TakeViewController.swift */,
+				DFAFFCBF27B1E7A500584844 /* CaptureViewController.swift */,
+				DFAFFCE527B34C7900584844 /* TrimViewController.swift */,
+				DFAFFCFB27B41FDD00584844 /* CollabTrimmerViewController.swift */,
+				DFAFFCFD27B43B4F00584844 /* RemixViewController.swift */,
+				DFAFFD1F27B4910F00584844 /* PublishViewController.swift */,
+				DFAFFD2927BAFE0000584844 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DFFA0A4027ADD33E00DD73EA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA0A3927AB9ECD00DD73EA /* AppHeadphoneManager.swift */,
+				DFFA0A4127ADD34A00DD73EA /* Alert.swift */,
+				DFAFFC6B27B1A89800584844 /* AspectRatioCalculator.swift */,
+				DFAFFC7427B1AB5E00584844 /* BeatSnapper.swift */,
+				DFAFFC7627B1AB8800584844 /* UIExtensions.swift */,
+				DFAFFC9327B1C3F000584844 /* Extensions.swift */,
+				DFAFFC8527B1B8AC00584844 /* AssetInfo.swift */,
+				DFAFFC8B27B1BE8600584844 /* MulticastDelegate.swift */,
+				DFAFFC8D27B1BF3600584844 /* AssetError.swift */,
+				DFAFFC9527B1C78900584844 /* CollabColors.swift */,
+				DFAFFCA327B1CDF900584844 /* WeakRef.swift */,
+				DFAFFCC127B1EA4C00584844 /* FileUtil.swift */,
+				DFAFFCD327B1F51900584844 /* ClickTrackComposer.swift */,
+				DFAFFD1D27B45A5A00584844 /* AppMuteManager.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFFA0A1E27AB8B0200DD73EA /* CollabOpenSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFFA0A3327AB8B0500DD73EA /* Build configuration list for PBXNativeTarget "CollabOpenSource" */;
+			buildPhases = (
+				CBB5F8319B782CA068F0FA4A /* [CP] Check Pods Manifest.lock */,
+				DFFA0A1B27AB8B0200DD73EA /* Sources */,
+				DFFA0A1C27AB8B0200DD73EA /* Frameworks */,
+				DFFA0A1D27AB8B0200DD73EA /* Resources */,
+				BC6821AA0F6822DC30C6D6B7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollabOpenSource;
+			productName = CollabOpenSource;
+			productReference = DFFA0A1F27AB8B0200DD73EA /* CollabOpenSource.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFFA0A1727AB8B0200DD73EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					DFFA0A1E27AB8B0200DD73EA = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
+					};
+				};
+			};
+			buildConfigurationList = DFFA0A1A27AB8B0200DD73EA /* Build configuration list for PBXProject "CollabOpenSource" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFFA0A1627AB8B0200DD73EA;
+			packageReferences = (
+				DFFA0A3F27ACB8B200DD73EA /* XCRemoteSwiftPackageReference "BrightFutures" */,
+			);
+			productRefGroup = DFFA0A2027AB8B0200DD73EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFFA0A1E27AB8B0200DD73EA /* CollabOpenSource */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFFA0A1D27AB8B0200DD73EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFAFFCDE27B3471000584844 /* UnmuteView.xib in Resources */,
+				DFAFFCDC27B345DD00584844 /* MetronomeHeadphoneView.xib in Resources */,
+				DFFA0A2F27AB8B0500DD73EA /* LaunchScreen.storyboard in Resources */,
+				DFAFFD2827BAF28700584844 /* Main.storyboard in Resources */,
+				DFFA0A2C27AB8B0500DD73EA /* Assets.xcassets in Resources */,
+				DFAFFCE227B3481800584844 /* clickStandard.wav in Resources */,
+				DFAFFCE027B3479000584844 /* NudgeTitleView.xib in Resources */,
+				DFAFFCE427B3484D00584844 /* clickAccent.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC6821AA0F6822DC30C6D6B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBB5F8319B782CA068F0FA4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CollabOpenSource-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFFA0A1B27AB8B0200DD73EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFAFFC9227B1C1AE00584844 /* AVPlayerView.swift in Sources */,
+				DFAFFD0F27B4481700584844 /* LayoutEngineViewController.swift in Sources */,
+				DFAFFD2627B6C47A00584844 /* OverlayProgressView.swift in Sources */,
+				DFAFFCB027B1DED200584844 /* CreationRecordViewController.swift in Sources */,
+				DFAFFCFA27B41F7D00584844 /* TrimEditLoopingVideoView.swift in Sources */,
+				DFAFFCA027B1CB0000584844 /* InstrumentedAVPlayer.swift in Sources */,
+				DFFA0A3A27AB9ECD00DD73EA /* AppHeadphoneManager.swift in Sources */,
+				DFAFFCC027B1E7A500584844 /* CaptureViewController.swift in Sources */,
+				DFAFFCA427B1CDF900584844 /* WeakRef.swift in Sources */,
+				DFAFFC7327B1AAFF00584844 /* SpinnerView.swift in Sources */,
+				DFAFFCF427B41E8C00584844 /* FDWaveformView.swift in Sources */,
+				DFAFFD0727B4427000584844 /* RadioTabView.swift in Sources */,
+				DFAFFCB827B1E31F00584844 /* GradientLoadingView.swift in Sources */,
+				DFAFFC9C27B1CA3F00584844 /* HotPlayer.swift in Sources */,
+				DFAFFD0927B4429400584844 /* RadioTabBarViewController.swift in Sources */,
+				DFAFFCA627B1CEAA00584844 /* HotLooper.swift in Sources */,
+				DFAFFCEC27B34E5F00584844 /* WaveformTrimmerViewController.swift in Sources */,
+				DFAFFCBC27B1E4F400584844 /* PlaybackEditor.swift in Sources */,
+				DFAFFCAA27B1CFC000584844 /* FragmentDataModelEventHandler.swift in Sources */,
+				DFAFFD2027B4910F00584844 /* PublishViewController.swift in Sources */,
+				DFAFFCA827B1CF2300584844 /* CoordinatedLooperGroup.swift in Sources */,
+				DFAFFD1927B44B9D00584844 /* DimmablePresentationController.swift in Sources */,
+				DFAFFCFC27B41FDD00584844 /* CollabTrimmerViewController.swift in Sources */,
+				DFFA0A2327AB8B0200DD73EA /* AppDelegate.swift in Sources */,
+				DFAFFD0327B43FE700584844 /* CollabScrollView.swift in Sources */,
+				DFAFFCBA27B1E3F900584844 /* NudgeViewController.swift in Sources */,
+				DFAFFCD827B1F89700584844 /* CollabCaptureDeviceConfigurator.m in Sources */,
+				DFAFFCB427B1E0F100584844 /* VolumeViewController.swift in Sources */,
+				DFAFFCBE27B1E76800584844 /* TakeViewController.swift in Sources */,
+				DFAFFC9A27B1C94400584844 /* Looper.swift in Sources */,
+				DFAFFD0527B4422600584844 /* RemixTrayViewController.swift in Sources */,
+				DFAFFCD427B1F51900584844 /* ClickTrackComposer.swift in Sources */,
+				DFAFFD0B27B4463000584844 /* ClipsTrayCollectionViewController.swift in Sources */,
+				DFAFFC9027B1C03B00584844 /* AVPlayerHostView.swift in Sources */,
+				DFFA0A4227ADD34A00DD73EA /* Alert.swift in Sources */,
+				DFAFFC7B27B1B0B300584844 /* MetronomeEditViewController.swift in Sources */,
+				DFAFFC8E27B1BF3600584844 /* AssetError.swift in Sources */,
+				DFAFFC9827B1C8B900584844 /* QueuePlayerLooper.swift in Sources */,
+				DFAFFCA227B1CB3C00584844 /* InstrumentedPlayer.swift in Sources */,
+				DFAFFCFE27B43B4F00584844 /* RemixViewController.swift in Sources */,
+				DFAFFCF827B41EEE00584844 /* FDWaveformRenderOperation.swift in Sources */,
+				DFAFFCC827B1EE8C00584844 /* AssetReader.swift in Sources */,
+				DFAFFC6A27B1A68E00584844 /* InitialRecordViewController.swift in Sources */,
+				DFAFFCB227B1DF4100584844 /* FragmentCreationViewController.swift in Sources */,
+				DFAFFC8627B1B8AC00584844 /* AssetInfo.swift in Sources */,
+				DFAFFCC227B1EA4C00584844 /* FileUtil.swift in Sources */,
+				DFAFFCD227B1F41D00584844 /* CollabRasterizer.swift in Sources */,
+				DFAFFC6827B19DAA00584844 /* CreationLaunchScreenViewController.swift in Sources */,
+				DFAFFC6F27B1A9A300584844 /* RecordButtonView.swift in Sources */,
+				DFAFFCAC27B1D11E00584844 /* PlaybackDataModel.swift in Sources */,
+				DFAFFD1127B4489F00584844 /* MulticlipType.swift in Sources */,
+				DFAFFCB627B1E2BD00584844 /* FragmentLabelView.swift in Sources */,
+				DFAFFC9627B1C78900584844 /* CollabColors.swift in Sources */,
+				DFAFFCD027B1F27E00584844 /* AssetComposer.swift in Sources */,
+				DFAFFCDA27B31D2E00584844 /* RecordingAuthorizer.swift in Sources */,
+				DFAFFCCC27B1F08000584844 /* TakeGenerator.swift in Sources */,
+				DFAFFD2A27BAFE0000584844 /* SettingsViewController.swift in Sources */,
+				DFAFFC7127B1AA4600584844 /* GradientView.swift in Sources */,
+				DFAFFC6C27B1A89800584844 /* AspectRatioCalculator.swift in Sources */,
+				DFAFFC7727B1AB8800584844 /* UIExtensions.swift in Sources */,
+				DFAFFCC627B1EDF300584844 /* AssetRecorder.swift in Sources */,
+				DFAFFD1E27B45A5A00584844 /* AppMuteManager.swift in Sources */,
+				DFAFFC8C27B1BE8600584844 /* MulticastDelegate.swift in Sources */,
+				DFAFFCF027B34F0700584844 /* TrimmerSliderHandleView.swift in Sources */,
+				DFAFFCCE27B1F13500584844 /* AssetCopier.swift in Sources */,
+				DFAFFC8427B1B7F000584844 /* FragmentHost.swift in Sources */,
+				DFAFFCC427B1ECFF00584844 /* PreviewView.swift in Sources */,
+				DFAFFCF627B41EB600584844 /* FDAudioContext.swift in Sources */,
+				DFAFFC7927B1ADD900584844 /* RecordActionViewController.swift in Sources */,
+				DFAFFC8A27B1BE5B00584844 /* FragmentPlaybackChangeAnnouncerListener.swift in Sources */,
+				DFAFFC7527B1AB5E00584844 /* BeatSnapper.swift in Sources */,
+				DFAFFD0027B43EE600584844 /* SlideshowViewController.swift in Sources */,
+				DFAFFC9427B1C3F000584844 /* Extensions.swift in Sources */,
+				DFAFFD1C27B44C5F00584844 /* DimOverlayView.swift in Sources */,
+				DFAFFD0D27B4466A00584844 /* ClipsTrayCollectionViewCell.swift in Sources */,
+				DFAFFD1527B44AA000584844 /* CollabAlertViewController.swift in Sources */,
+				DFAFFCAE27B1D8DF00584844 /* LocalAssetManager.swift in Sources */,
+				DFAFFCEE27B34ED700584844 /* WaveformTrimmerSliderView.swift in Sources */,
+				DFAFFC8827B1BA2600584844 /* APIModel.swift in Sources */,
+				DFAFFCF227B34F5A00584844 /* ProgressIndicator.swift in Sources */,
+				DFAFFC9E27B1CA9A00584844 /* ObservablePlayerItem.swift in Sources */,
+				DFAFFCE627B34C7900584844 /* TrimViewController.swift in Sources */,
+				DFAFFC8027B1B49A00584844 /* PlaybackCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DFFA0A2D27AB8B0500DD73EA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFFA0A2E27AB8B0500DD73EA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFFA0A3127AB8B0500DD73EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DFFA0A3227AB8B0500DD73EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFFA0A3427AB8B0500DD73EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD4C7A443E86ACDB56D981AF /* Pods-CollabOpenSource.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AJ6AXYGXN2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CollabOpenSource/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CollabOpenSource;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Natalie-Muenster.CollabOpenSource";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CollabOpenSource/Sources/CollabOpenSource-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFFA0A3527AB8B0500DD73EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24B55E01BA8ACA85862CC433 /* Pods-CollabOpenSource.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AJ6AXYGXN2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CollabOpenSource/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CollabOpenSource;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Natalie-Muenster.CollabOpenSource";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CollabOpenSource/Sources/CollabOpenSource-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFFA0A1A27AB8B0200DD73EA /* Build configuration list for PBXProject "CollabOpenSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFA0A3127AB8B0500DD73EA /* Debug */,
+				DFFA0A3227AB8B0500DD73EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFFA0A3327AB8B0500DD73EA /* Build configuration list for PBXNativeTarget "CollabOpenSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFA0A3427AB8B0500DD73EA /* Debug */,
+				DFFA0A3527AB8B0500DD73EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DFFA0A3F27ACB8B200DD73EA /* XCRemoteSwiftPackageReference "BrightFutures" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Thomvis/BrightFutures";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = DFFA0A1727AB8B0200DD73EA /* Project object */;
+}
