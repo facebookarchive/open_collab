@@ -13,7 +13,7 @@ import Kingfisher
 
   var window: UIWindow?
   static private(set) var fragmentAssetManager: LocalAssetManager?
-  static let avSessionQueue = DispatchQueue(label: "com.collabOpenSource.avsession")
+  static let avSessionQueue = DispatchQueue(label: "com.openCollab.avsession")
 
   override init() {
     super.init()

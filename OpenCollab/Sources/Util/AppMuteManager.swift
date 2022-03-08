@@ -7,7 +7,7 @@ class AppMuteManager {
 
   enum Notifications {
     static let muteSwitchStateChanged =
-      Notification.Name(rawValue: "com.collabOpenSource.notification.name.muteSwitchStateChanged")
+      Notification.Name(rawValue: "com.openCollab.notification.name.muteSwitchStateChanged")
   }
 
   enum MuteState {

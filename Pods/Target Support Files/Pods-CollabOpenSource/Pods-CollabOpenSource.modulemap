@@ -1,6 +1,0 @@
-framework module Pods_CollabOpenSource {
-  umbrella header "Pods-CollabOpenSource-umbrella.h"
-
-  export *
-  module * { export * }
-}

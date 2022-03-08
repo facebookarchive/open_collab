@@ -5,7 +5,7 @@ import BrightFutures
 import Foundation
 
 class AssetRecorder: NSObject {
-  private let writingQueue = DispatchQueue(label: "com.collabOpenSource.assetrecorder")
+  private let writingQueue = DispatchQueue(label: "com.openCollab.assetrecorder")
 
   private let url: URL
 

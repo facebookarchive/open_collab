@@ -61,7 +61,7 @@ class CaptureViewController: UIViewController {
   private var stopRecordingTime: CMTime = .positiveInfinity
   private var allAudioSamplesCaptured = false
   private var allVideoSamplesCaptured = false
-  private let sampleBufferQueue = DispatchQueue(label: "com.collabOpenSource.sampleBufferQueue")
+  private let sampleBufferQueue = DispatchQueue(label: "com.openCollab.sampleBufferQueue")
   private let sessionQueue: DispatchQueue
   private var setupResult: SessionSetupResult = .undetermined
   @objc dynamic var videoDeviceInput: AVCaptureDeviceInput!

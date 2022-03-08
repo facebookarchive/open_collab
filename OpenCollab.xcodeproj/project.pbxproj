@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77DFE121D27E9F8B553E157D /* Pods_CollabOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2FBE05E23AE9A73DC5BAB62 /* Pods_CollabOpenSource.framework */; };
+		32EA74F527E90AF0005EB906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAFFD2727BAF28700584844 /* Main.storyboard */; };
+		B8F9D6092A755A0545A83D43 /* Pods_OpenCollab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD9865205227692C339754B /* Pods_OpenCollab.framework */; };
 		DFAFFC6827B19DAA00584844 /* CreationLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC6727B19DAA00584844 /* CreationLaunchScreenViewController.swift */; };
 		DFAFFC6A27B1A68E00584844 /* InitialRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC6927B1A68E00584844 /* InitialRecordViewController.swift */; };
 		DFAFFC6C27B1A89800584844 /* AspectRatioCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFC6B27B1A89800584844 /* AspectRatioCalculator.swift */; };
@@ -92,7 +93,6 @@
 		DFAFFD1E27B45A5A00584844 /* AppMuteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD1D27B45A5A00584844 /* AppMuteManager.swift */; };
 		DFAFFD2027B4910F00584844 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD1F27B4910F00584844 /* PublishViewController.swift */; };
 		DFAFFD2627B6C47A00584844 /* OverlayProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD2527B6C47A00584844 /* OverlayProgressView.swift */; };
-		DFAFFD2827BAF28700584844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAFFD2727BAF28700584844 /* Main.storyboard */; };
 		DFAFFD2A27BAFE0000584844 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFFD2927BAFE0000584844 /* SettingsViewController.swift */; };
 		DFFA0A2327AB8B0200DD73EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA0A2227AB8B0200DD73EA /* AppDelegate.swift */; };
 		DFFA0A2C27AB8B0500DD73EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFFA0A2B27AB8B0500DD73EA /* Assets.xcassets */; };
@@ -103,9 +103,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24B55E01BA8ACA85862CC433 /* Pods-CollabOpenSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollabOpenSource.release.xcconfig"; path = "Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource.release.xcconfig"; sourceTree = "<group>"; };
-		CD4C7A443E86ACDB56D981AF /* Pods-CollabOpenSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollabOpenSource.debug.xcconfig"; path = "Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource.debug.xcconfig"; sourceTree = "<group>"; };
-		D2FBE05E23AE9A73DC5BAB62 /* Pods_CollabOpenSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollabOpenSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33ED288F89BFD68B384A4294 /* Pods-OpenCollab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCollab.release.xcconfig"; path = "Target Support Files/Pods-OpenCollab/Pods-OpenCollab.release.xcconfig"; sourceTree = "<group>"; };
+		5DFF51233A5B9E7B1A623E69 /* Pods-OpenCollab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCollab.debug.xcconfig"; path = "Target Support Files/Pods-OpenCollab/Pods-OpenCollab.debug.xcconfig"; sourceTree = "<group>"; };
+		7DD9865205227692C339754B /* Pods_OpenCollab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenCollab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAFFC6727B19DAA00584844 /* CreationLaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationLaunchScreenViewController.swift; sourceTree = "<group>"; };
 		DFAFFC6927B1A68E00584844 /* InitialRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRecordViewController.swift; sourceTree = "<group>"; };
 		DFAFFC6B27B1A89800584844 /* AspectRatioCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectRatioCalculator.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		DFAFFCD127B1F41D00584844 /* CollabRasterizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabRasterizer.swift; sourceTree = "<group>"; };
 		DFAFFCD327B1F51900584844 /* ClickTrackComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickTrackComposer.swift; sourceTree = "<group>"; };
 		DFAFFCD527B1F84400584844 /* CollabCaptureDeviceConfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollabCaptureDeviceConfigurator.h; sourceTree = "<group>"; };
-		DFAFFCD627B1F89700584844 /* CollabOpenSource-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CollabOpenSource-Bridging-Header.h"; sourceTree = "<group>"; };
+		DFAFFCD627B1F89700584844 /* OpenCollab-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCollab-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFAFFCD727B1F89700584844 /* CollabCaptureDeviceConfigurator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollabCaptureDeviceConfigurator.m; sourceTree = "<group>"; };
 		DFAFFCD927B31D2E00584844 /* RecordingAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAuthorizer.swift; sourceTree = "<group>"; };
 		DFAFFCDB27B345DD00584844 /* MetronomeHeadphoneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetronomeHeadphoneView.xib; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		DFAFFD2C27BB22DF00584844 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		DFAFFD2D27BB236700584844 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		DFAFFD2E27BB24C500584844 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
-		DFFA0A1F27AB8B0200DD73EA /* CollabOpenSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollabOpenSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFA0A1F27AB8B0200DD73EA /* OpenCollab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCollab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFA0A2227AB8B0200DD73EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFFA0A2B27AB8B0500DD73EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFFA0A2E27AB8B0500DD73EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFFA0A4427B18CAE00DD73EA /* AVFoundation.framework in Frameworks */,
-				77DFE121D27E9F8B553E157D /* Pods_CollabOpenSource.framework in Frameworks */,
+				B8F9D6092A755A0545A83D43 /* Pods_OpenCollab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +224,8 @@
 		16724090DEE25AC349A037DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CD4C7A443E86ACDB56D981AF /* Pods-CollabOpenSource.debug.xcconfig */,
-				24B55E01BA8ACA85862CC433 /* Pods-CollabOpenSource.release.xcconfig */,
+				5DFF51233A5B9E7B1A623E69 /* Pods-OpenCollab.debug.xcconfig */,
+				33ED288F89BFD68B384A4294 /* Pods-OpenCollab.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				DFFA0A4327B18CAE00DD73EA /* AVFoundation.framework */,
-				D2FBE05E23AE9A73DC5BAB62 /* Pods_CollabOpenSource.framework */,
+				7DD9865205227692C339754B /* Pods_OpenCollab.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 		DFFA0A1627AB8B0200DD73EA = {
 			isa = PBXGroup;
 			children = (
-				DFFA0A2127AB8B0200DD73EA /* CollabOpenSource */,
+				DFFA0A2127AB8B0200DD73EA /* OpenCollab */,
 				DFFA0A2027AB8B0200DD73EA /* Products */,
 				16724090DEE25AC349A037DA /* Pods */,
 				BA4EC97DFADD4C48678439C9 /* Frameworks */,
@@ -353,12 +353,12 @@
 		DFFA0A2027AB8B0200DD73EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFFA0A1F27AB8B0200DD73EA /* CollabOpenSource.app */,
+				DFFA0A1F27AB8B0200DD73EA /* OpenCollab.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFFA0A2127AB8B0200DD73EA /* CollabOpenSource */ = {
+		DFFA0A2127AB8B0200DD73EA /* OpenCollab */ = {
 			isa = PBXGroup;
 			children = (
 				DFFA0A3627AB972700DD73EA /* Sources */,
@@ -369,7 +369,7 @@
 				DFAFFD2E27BB24C500584844 /* CODE_OF_CONDUCT.md */,
 				DFAFFD2C27BB22DF00584844 /* CONTRIBUTING.md */,
 			);
-			path = CollabOpenSource;
+			path = OpenCollab;
 			sourceTree = "<group>";
 		};
 		DFFA0A3627AB972700DD73EA /* Sources */ = {
@@ -382,7 +382,7 @@
 				DFAFFCC927B1F00500584844 /* RecordingSupport */,
 				DFFA0A2227AB8B0200DD73EA /* AppDelegate.swift */,
 				DFAFFC6727B19DAA00584844 /* CreationLaunchScreenViewController.swift */,
-				DFAFFCD627B1F89700584844 /* CollabOpenSource-Bridging-Header.h */,
+				DFAFFCD627B1F89700584844 /* OpenCollab-Bridging-Header.h */,
 				DFAFFC7E27B1B48300584844 /* VideoPlayback */,
 				DFAFFC6D27B1A97200584844 /* Views */,
 				DFFA0A4027ADD33E00DD73EA /* Util */,
@@ -453,23 +453,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DFFA0A1E27AB8B0200DD73EA /* CollabOpenSource */ = {
+		DFFA0A1E27AB8B0200DD73EA /* OpenCollab */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFFA0A3327AB8B0500DD73EA /* Build configuration list for PBXNativeTarget "CollabOpenSource" */;
+			buildConfigurationList = DFFA0A3327AB8B0500DD73EA /* Build configuration list for PBXNativeTarget "OpenCollab" */;
 			buildPhases = (
-				CBB5F8319B782CA068F0FA4A /* [CP] Check Pods Manifest.lock */,
+				3A445E785FE9617B41535985 /* [CP] Check Pods Manifest.lock */,
 				DFFA0A1B27AB8B0200DD73EA /* Sources */,
 				DFFA0A1C27AB8B0200DD73EA /* Frameworks */,
 				DFFA0A1D27AB8B0200DD73EA /* Resources */,
-				BC6821AA0F6822DC30C6D6B7 /* [CP] Embed Pods Frameworks */,
+				1246B27F4C0F325BFEA2BE75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CollabOpenSource;
+			name = OpenCollab;
 			productName = CollabOpenSource;
-			productReference = DFFA0A1F27AB8B0200DD73EA /* CollabOpenSource.app */;
+			productReference = DFFA0A1F27AB8B0200DD73EA /* OpenCollab.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -488,7 +488,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DFFA0A1A27AB8B0200DD73EA /* Build configuration list for PBXProject "CollabOpenSource" */;
+			buildConfigurationList = DFFA0A1A27AB8B0200DD73EA /* Build configuration list for PBXProject "OpenCollab" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -504,7 +504,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DFFA0A1E27AB8B0200DD73EA /* CollabOpenSource */,
+				DFFA0A1E27AB8B0200DD73EA /* OpenCollab */,
 			);
 		};
 /* End PBXProject section */
@@ -517,7 +517,7 @@
 				DFAFFCDE27B3471000584844 /* UnmuteView.xib in Resources */,
 				DFAFFCDC27B345DD00584844 /* MetronomeHeadphoneView.xib in Resources */,
 				DFFA0A2F27AB8B0500DD73EA /* LaunchScreen.storyboard in Resources */,
-				DFAFFD2827BAF28700584844 /* Main.storyboard in Resources */,
+				32EA74F527E90AF0005EB906 /* Main.storyboard in Resources */,
 				DFFA0A2C27AB8B0500DD73EA /* Assets.xcassets in Resources */,
 				DFAFFCE227B3481800584844 /* clickStandard.wav in Resources */,
 				DFAFFCE027B3479000584844 /* NudgeTitleView.xib in Resources */,
@@ -528,24 +528,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BC6821AA0F6822DC30C6D6B7 /* [CP] Embed Pods Frameworks */ = {
+		1246B27F4C0F325BFEA2BE75 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OpenCollab/Pods-OpenCollab-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OpenCollab/Pods-OpenCollab-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CollabOpenSource/Pods-CollabOpenSource-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpenCollab/Pods-OpenCollab-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CBB5F8319B782CA068F0FA4A /* [CP] Check Pods Manifest.lock */ = {
+		3A445E785FE9617B41535985 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -560,7 +560,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CollabOpenSource-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-OpenCollab-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -794,7 +794,7 @@
 		};
 		DFFA0A3427AB8B0500DD73EA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD4C7A443E86ACDB56D981AF /* Pods-CollabOpenSource.debug.xcconfig */;
+			baseConfigurationReference = 5DFF51233A5B9E7B1A623E69 /* Pods-OpenCollab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -804,8 +804,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9AJ9Q4SDA6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CollabOpenSource/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CollabOpenSource;
+				INFOPLIST_FILE = OpenCollab/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OpenCollab;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This lets you record clips.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This lets you record audio.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This lets you save media to your library.";
@@ -825,7 +825,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "CollabOpenSource/Sources/CollabOpenSource-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCollab/Sources/OpenCollab-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -834,7 +834,7 @@
 		};
 		DFFA0A3527AB8B0500DD73EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24B55E01BA8ACA85862CC433 /* Pods-CollabOpenSource.release.xcconfig */;
+			baseConfigurationReference = 33ED288F89BFD68B384A4294 /* Pods-OpenCollab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -844,8 +844,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9AJ9Q4SDA6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CollabOpenSource/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CollabOpenSource;
+				INFOPLIST_FILE = OpenCollab/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OpenCollab;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This lets you record clips.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This lets you record audio.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This lets you save media to your library.";
@@ -865,7 +865,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "CollabOpenSource/Sources/CollabOpenSource-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCollab/Sources/OpenCollab-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -874,7 +874,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DFFA0A1A27AB8B0200DD73EA /* Build configuration list for PBXProject "CollabOpenSource" */ = {
+		DFFA0A1A27AB8B0200DD73EA /* Build configuration list for PBXProject "OpenCollab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFFA0A3127AB8B0500DD73EA /* Debug */,
@@ -883,7 +883,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFFA0A3327AB8B0500DD73EA /* Build configuration list for PBXNativeTarget "CollabOpenSource" */ = {
+		DFFA0A3327AB8B0500DD73EA /* Build configuration list for PBXNativeTarget "OpenCollab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFFA0A3427AB8B0500DD73EA /* Debug */,

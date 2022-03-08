@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CollabOpenSourceVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CollabOpenSourceVersionString[];
+FOUNDATION_EXPORT double Pods_OpenCollabVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_OpenCollabVersionString[];
 

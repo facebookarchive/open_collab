@@ -15,9 +15,9 @@ class AppHeadphoneManager {
 
   enum Notifications {
     static let headphoneStateChanged =
-      Notification.Name(rawValue: "com.collabOpenSource.notification.name.headphoneStateChanged")
+      Notification.Name(rawValue: "com.openCollab.notification.name.headphoneStateChanged")
     static let headphoneTypeChanged =
-      Notification.Name(rawValue: "com.collabOpenSource.notification.name.headphoneTypeChanged")
+      Notification.Name(rawValue: "com.openCollab.notification.name.headphoneTypeChanged")
   }
 
   enum HeadphoneState {

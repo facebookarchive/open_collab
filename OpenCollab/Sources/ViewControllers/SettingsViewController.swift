@@ -4,8 +4,8 @@ import UIKit
 class SettingsViewController: UIViewController {
 
   enum Constants {
-    static let disableCameraMirroringKey = "com.collabOpenSource.keys.enableCameraMirroring"
-    static let enableUploadFromCameraRollKey = "com.collabOpenSource.keys.enableUploadFromCameraRollKey"
+    static let disableCameraMirroringKey = "com.openCollab.keys.enableCameraMirroring"
+    static let enableUploadFromCameraRollKey = "com.openCollab.keys.enableUploadFromCameraRollKey"
   }
 
   @IBOutlet weak var stackView: UIStackView!
