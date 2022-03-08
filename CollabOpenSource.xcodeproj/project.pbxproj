@@ -799,12 +799,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AJ6AXYGXN2;
+				DEVELOPMENT_TEAM = 9AJ9Q4SDA6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CollabOpenSource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CollabOpenSource;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This lets you record clips.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This lets you record audio.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This lets you save media to your library.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This lets you select media from your library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -816,8 +821,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Natalie-Muenster.CollabOpenSource";
+				PRODUCT_BUNDLE_IDENTIFIER = com.opencollab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "CollabOpenSource/Sources/CollabOpenSource-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -833,12 +839,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AJ6AXYGXN2;
+				DEVELOPMENT_TEAM = 9AJ9Q4SDA6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CollabOpenSource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CollabOpenSource;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This lets you record clips.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This lets you record audio.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This lets you save media to your library.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This lets you select media from your library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -850,8 +861,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Natalie-Muenster.CollabOpenSource";
+				PRODUCT_BUNDLE_IDENTIFIER = com.opencollab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "CollabOpenSource/Sources/CollabOpenSource-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
