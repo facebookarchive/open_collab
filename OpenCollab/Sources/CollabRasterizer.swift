@@ -84,8 +84,11 @@ class Rasterizer {
 
     let validAssetTuples = assetWithVolumeTuples.filter { $0.0 != nil }
     let numberOfClips = assetWithVolumeTuples.count
-    guard validAssetTuples.count > 0, let duration = validAssetTuples[0].0?.duration else { return Future(error: .General(nil)) }
-    let timeRange = CMTimeRangeMake(start: CMTime.zero, duration: duration)
+    guard validAssetTuples.count > 0, let minDuration = (validAssetTuples.compactMap { asset, _ in
+      asset?.duration
+    }.min()) else { return Future(error: .General(nil)) }
+    
+    let timeRange = CMTimeRangeMake(start: CMTime.zero, duration: minDuration)
 
     let mixComposition = AVMutableComposition()
     var arrayLayerInstructions: [AVMutableVideoCompositionLayerInstruction] = []

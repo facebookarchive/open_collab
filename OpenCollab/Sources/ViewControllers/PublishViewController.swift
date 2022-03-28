@@ -256,6 +256,14 @@ class PublishViewController: UIViewController {
 // MARK: - Publishing
 
 extension PublishViewController {
+  
+  fileprivate func extractAssetsAndVolumes(fragments: [FragmentHost?]) -> Future<[(AVURLAsset?, Float)], AssetError> {
+    return fragments.compactMap { $0 }.map { fragment in
+      fragment.asset(allowManualSyncing: false).map { asset in
+        (asset, fragment.volume)
+      }
+    }.sequence()
+  }
 
   @objc fileprivate func didSelectCameraRollButton(_ sender: AnyObject?) {
     guard let assetManager = AppDelegate.fragmentAssetManager else {
@@ -263,14 +271,26 @@ extension PublishViewController {
       return
     }
     self.startSpinner()
-    let volumeAndAssetFutures = fragments.map { (fragment) in
-      return fragment.asset(allowManualSyncing: false)
-        .flatMap { asset -> Future<(AVURLAsset?, Float), AssetError> in
-          return Future(value: (asset, fragment.volume))
-        }
+    
+    let exportInfos = fragments.map { (fragment) -> ExportInfo in
+      // Calculate a new fragment so that the start and end of the asset are the playback times.
+      // We are essentially hard applying the edit by creating a new copy of the asset.
+      let exportStartTime = fragment.playbackStartTime
+      let exportEndTime = fragment.playbackEndTime
+      let duration = CMTimeSubtract(exportEndTime, exportStartTime)
+
+      let exportFragment = FragmentHost(assetInfo: fragment.assetInfo,
+                                        volume: fragment.volume,
+                                        assetDuration: duration)
+      return ExportInfo(fragment: exportFragment,
+                        exportStartTime: exportStartTime,
+                        exportEndTime: exportEndTime)
     }
 
-    volumeAndAssetFutures.sequence().onSuccess { assetAndVolumes in
+    let assetCopier = AssetCopier(exportInfos: exportInfos)
+    let assetsAndVolumesFuture = assetCopier.startCopy().flatMap(extractAssetsAndVolumes)
+
+    assetsAndVolumesFuture.onSuccess { assetAndVolumes in
       Rasterizer.shared.rasterize(assetWithVolumeTuples: assetAndVolumes,
                                   directoryURL: assetManager.rasterizationDirectory(),
                                   replaceLocalCopy: true)
