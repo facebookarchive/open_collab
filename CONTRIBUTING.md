@@ -1,4 +1,4 @@
-# Contributing to CollabOpenSource
+# Contributing to OpenCollab
 We want to make contributing to this project as easy and transparent as
 possible.
 
@@ -10,7 +10,7 @@ We actively welcome your pull requests.
 
 1. Fork the repo and create your branch from `main`.
 2. If you've added code that should be tested, add tests.
-3. If you've changed APIs, update the documentation.
+3. If you've added or changed APIs, update the documentation.
 4. Ensure the test suite passes.
 5. Make sure your code lints.
 6. If you haven't already, complete the Contributor License Agreement ("CLA").
@@ -30,9 +30,7 @@ disclosure of security bugs. In those cases, please go through the process
 outlined on that page and do not file a public issue.
 
 ## Coding Style  
-* 2 spaces for indentation rather than tabs
-* 80 character line length
-* ...
+OpenCollab uses SwiftLint for formatting and lint rules. Our rules are found in [swiftlint.yml].
 
 ## License
 By contributing to CollabOpenSource, you agree that your contributions will be licensed
