@@ -1,13 +1,13 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
 import Foundation
+import UIKit
 
 enum Constants {
   static let fullbleedSingleVideoAspectRatio: CGFloat = 9 / 15
   static let multiclip2UpAspectRatio: CGFloat = (16 / 9) / 2
   static let multiclip4UpAspectRatio: CGFloat = 16 / 9
-  static let multiclip6UpAspectRatio: CGFloat = (16/3) / (9/2)
+  static let multiclip6UpAspectRatio: CGFloat = (16 / 3) / (9 / 2)
   static let fullbleedCollabAspectRatio: CGFloat = 27 / 15 // 3 vertical 9:15
 }
 

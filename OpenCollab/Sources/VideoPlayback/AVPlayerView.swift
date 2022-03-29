@@ -22,7 +22,7 @@ public class AVLooperView: UIView, AVPlayerView {
     }
   }
 
-  public override func layoutSubviews() {
+  override public func layoutSubviews() {
     super.layoutSubviews()
 
     guard let looper = looper else { return }
@@ -35,7 +35,7 @@ public class AVLooperView: UIView, AVPlayerView {
     }
   }
 
-  public override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     self.playerLayer?.contentsGravity = .resizeAspectFill
     self.playerLayer?.videoGravity = .resizeAspectFill

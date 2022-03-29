@@ -1,8 +1,8 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import Foundation
 import AVFoundation
 import BrightFutures
+import Foundation
 
 public extension CMTime {
   func toSeconds() -> Double {
@@ -69,7 +69,7 @@ extension URL {
     guard let attributes = try? FileManager.default.attributesOfItem(atPath: self.absoluteURL.path) else { return nil }
     return attributes[FileAttributeKey.size] as? UInt64
   }
-  
+
   var fileSizeInMB: Double? {
     guard let size = self.fileSize else { return nil }
     return Double(size) / (1024.0 * 1024.0)

@@ -1,9 +1,9 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import Foundation
-import CoreMedia
-import BrightFutures
 import AVFoundation
+import BrightFutures
+import CoreMedia
+import Foundation
 
 struct RecordingAuthorizer {
   static func isAuthorized() -> Future<RecordingAuthorizationStatus, AssetError> { // TODO OS: Add AssetError type?? Or is that just for api?

@@ -1,8 +1,8 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
 import AVFoundation
-import UIKit
 import BrightFutures
+import UIKit
 
 enum RecordState {
   case none
@@ -215,7 +215,7 @@ class RemixViewController: UIViewController {
     return btn
   }()
   let addButton: UIButton = {
-    let btn =  UIButton(type: .custom)
+    let btn = UIButton(type: .custom)
     btn.translatesAutoresizingMaskIntoConstraints = false
     btn.setTitle("Add", for: .normal)
     btn.titleLabel?.font = .boldSystemFont(ofSize: 14)
@@ -286,7 +286,7 @@ class RemixViewController: UIViewController {
 
   // MARK: - UIViewController
 
-  public override func viewDidLoad() {
+  override public func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
 
@@ -313,14 +313,14 @@ class RemixViewController: UIViewController {
 
     self.navigationItem.leftBarButtonItem?.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
     self.navigationItem.leftBarButtonItem?.tintColor = .white
-    
+
     // ## TODO: For the ability to import a pool of existing fragments which can then be used in remix,
     // uncomment the following line and implement a way to pull those fragments in:
-    
+
     // self.loadFragments()
   }
 
-  public override func viewDidAppear(_ animated: Bool) {
+  override public func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     print("------------------------------------ ENTER REMIX -----------------------------------")
 
@@ -358,7 +358,7 @@ class RemixViewController: UIViewController {
     print("------------------------------------ EXIT REMIX -----------------------------------")
   }
 
-  public override func viewDidLayoutSubviews() {
+  override public func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
     let bounds = self.view.bounds
@@ -371,9 +371,9 @@ class RemixViewController: UIViewController {
                                                                                     dismissActionView: actionViewDisabled)
     let actionFrame: CGRect
     let sideGap = layoutEngine.view.frame.minX - safeAreaBounds.origin.x
-    actionFrame = CGRect(x: safeAreaBounds.origin.x + sideGap/2,
+    actionFrame = CGRect(x: safeAreaBounds.origin.x + sideGap / 2,
                          y: layoutEngine.view.frame.maxY,
-                         width: safeAreaBounds.width - sideGap/2,
+                         width: safeAreaBounds.width - sideGap / 2,
                          height: Constants.clipsTrayHeight)
     remixTrayViewController.view.frame = actionFrame
 
@@ -529,7 +529,7 @@ class RemixViewController: UIViewController {
 
     let slideshow = slideshows[recordRank]
     // Right now record placeholder should always be index 0, but we shouldn't assume so in the future
-    guard let index = fragmentMatrix[recordRank].firstIndex(where: {$0?.isRecordPlaceholderFragment ?? false}) else { return }
+    guard let index = fragmentMatrix[recordRank].firstIndex(where: { $0?.isRecordPlaceholderFragment ?? false }) else { return }
     let placeholderSlide = SlideView(view: UIView(), thumbnailImage: recordThumbnail)
     slideshow.replaceSlide(view: placeholderSlide, index: index)
   }
@@ -616,7 +616,7 @@ class RemixViewController: UIViewController {
   }
 
   fileprivate func getSlideshow(rank: Int) -> SlideshowViewController? {
-    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread")}
+    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread") }
 
     guard rank >= 0, rank < slideshows.count else { return nil }
 
@@ -654,7 +654,7 @@ class RemixViewController: UIViewController {
   }
 
   @objc fileprivate func didSelectNextRemixButton(_ sender: AnyObject?) {
-    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread")}
+    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread") }
     previewCollab()
   }
 
@@ -1050,7 +1050,7 @@ extension RemixViewController {
   }
 
   private func updatePoolFragmentsInMatrix(addedFragments: [FragmentHost]) {
-    for rank in 0...(fragmentMatrix.count - 1)  {
+    for rank in 0...(fragmentMatrix.count - 1) {
       addedFragments.forEach {
         let fragmentController = FragmentCreationViewController(fragment: FragmentHost(fragment: $0),
                                                                 delegate: self)
@@ -1062,7 +1062,7 @@ extension RemixViewController {
 
   private func updateTakeFragmentsInMatrix(takeFragments: [FragmentHost]) {
     let takeLabelStart = playbackData.takeFragments.count - takeFragments.count + 1
-    for rank in 0...(fragmentMatrix.count - 1)  {
+    for rank in 0...(fragmentMatrix.count - 1) {
       for (takeNumber, take) in takeFragments.enumerated() {
         let titleLabel = takeLabelStart + takeNumber
         let fragmentController = FragmentCreationViewController(fragment: FragmentHost(fragment: take),
@@ -1295,7 +1295,7 @@ extension RemixViewController {
 
 extension RemixViewController: SlideshowViewControllerDelegate {
   func update(viewController: SlideshowViewController, index: Int, progress: Float) {
-    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread")}
+    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread") }
 
     guard let rank = slideshows.firstIndex(of: viewController) else { return }
     guard let fragmentController =
@@ -1305,7 +1305,7 @@ extension RemixViewController: SlideshowViewControllerDelegate {
   }
 
   func attach(viewController: SlideshowViewController, index: Int, previewOnly: Bool) {
-    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread")}
+    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread") }
 
     guard let rank = slideshows.firstIndex(of: viewController) else { return }
     if let fragmentController = getFragmentController(rank: rank, index: index),
@@ -1332,7 +1332,7 @@ extension RemixViewController: SlideshowViewControllerDelegate {
   }
 
   func detach(viewController: SlideshowViewController, index: Int, currentIndex: Int) {
-    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread")}
+    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread") }
 
     guard let rank = slideshows.firstIndex(of: viewController) else { return }
     let distance = abs(currentIndex - index)
@@ -1434,7 +1434,7 @@ extension RemixViewController: CreationRecordViewControllerDelegate {
 
     AppHeadphoneManager.shared.setAudioSessionForPlayback(on: AppDelegate.avSessionQueue).onComplete {_ in
 
-      //? Can we remove creation state?
+      // ? Can we remove creation state?
       self.nextCreationState()
       self.insertNewRecordedClips(fragments: fragments)
       self.removeCaptureView()
@@ -1495,7 +1495,6 @@ extension RemixViewController: PlaybackCoordinatorDelegate {
 
 extension RemixViewController: FragmentCreationViewControllerDelegate {
   func trimFinished() {
-
   }
 
   func select(viewController: FragmentCreationViewController, type: FragmentCreationViewController.SelectionType) {
@@ -1617,7 +1616,6 @@ extension RemixViewController: RemixTrayViewControllerDelegate {
   }
 }
 
-
 // MARK: - User interaction control.
 extension RemixViewController {
 
@@ -1711,11 +1709,11 @@ extension RemixViewController {
   fileprivate func previewButtonVisibility() -> Bool {
     // ## TODO : Implement additional rules here to restrict from publishing in specific cases
     // (ex: could disallow publishing one-clip collabs if user isn't the owner of the one clip)
-    
+
     // A user can't publish if the camera preview is open.
     let temporaryFragments = self.playbackData.selectedFragments.filter { $0.isRecordPlaceholder }
     guard temporaryFragments.count == 0 else { return false }
-    
+
     return true
   }
 

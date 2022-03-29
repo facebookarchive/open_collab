@@ -115,7 +115,6 @@ class VolumeViewController: UIViewController {
       volumeProgress.heightAnchor.constraint(equalTo: volumeIndicator.widthAnchor),
       volumeProgress.centerXAnchor.constraint(equalTo: volumeIndicator.centerXAnchor),
       volumeProgress.centerYAnchor.constraint(equalTo: volumeIndicator.centerYAnchor)
-
     ])
   }
 

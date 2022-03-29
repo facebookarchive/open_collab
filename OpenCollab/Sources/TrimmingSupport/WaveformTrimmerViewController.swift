@@ -1,7 +1,7 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import Foundation
 import AVFoundation
+import Foundation
 
 class WaveformTrimmerViewController: UIViewController, CollabTrimmerViewController {
   struct Constants {

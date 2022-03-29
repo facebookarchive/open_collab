@@ -1,16 +1,16 @@
 //
 // Copyright 2013 - 2017, William Entriken and the FDWaveformView contributors.
 //
-import UIKit
-import AVFoundation
 import Accelerate
+import AVFoundation
+import UIKit
 
 /// Format options for FDWaveformRenderOperation
-//MAYBE: Make this public
+// MAYBE: Make this public
 struct FDWaveformRenderFormat {
 
   /// The type of waveform to render
-  //TODO: make this public after reconciling FDWaveformView.WaveformType and FDWaveformType
+  // TODO: make this public after reconciling FDWaveformView.WaveformType and FDWaveformType
   var type: FDWaveformType
 
   /// The color of the waveform
@@ -42,7 +42,7 @@ struct FDWaveformRenderFormat {
 }
 
 /// Operation used for rendering waveform images
-final public class FDWaveformRenderOperation: Operation {
+public final class FDWaveformRenderOperation: Operation {
 
   /// The audio context used to build the waveform
   let audioContext: FDAudioContext
@@ -58,13 +58,13 @@ final public class FDWaveformRenderOperation: Operation {
 
   // MARK: - NSOperation Overrides
 
-  public override var isAsynchronous: Bool { return true }
+  override public var isAsynchronous: Bool { return true }
 
   private var _isExecuting = false
-  public override var isExecuting: Bool { return _isExecuting }
+  override public var isExecuting: Bool { return _isExecuting }
 
   private var _isFinished = false
-  public override var isFinished: Bool { return _isFinished }
+  override public var isFinished: Bool { return _isFinished }
 
   // MARK: - Private
 
@@ -90,7 +90,7 @@ final public class FDWaveformRenderOperation: Operation {
     }
   }
 
-  public override func start() {
+  override public func start() {
     guard !isExecuting && !isFinished && !isCancelled else { return }
 
     willChangeValue(forKey: "isExecuting")
@@ -212,7 +212,7 @@ final public class FDWaveformRenderOperation: Operation {
                      downSampledLength: downSampledLength,
                      samplesPerPixel: samplesPerPixel,
                      filter: filter)
-      //print("Status: \(reader.status)")
+      // print("Status: \(reader.status)")
     }
 
     // Process the remaining samples that did not fit into samplesPerPixel at the end
@@ -231,7 +231,7 @@ final public class FDWaveformRenderOperation: Operation {
                      downSampledLength: downSampledLength,
                      samplesPerPixel: samplesPerPixel,
                      filter: filter)
-      //print("Status: \(reader.status)")
+      // print("Status: \(reader.status)")
     }
 
     // if (reader.status == AVAssetReaderStatusFailed || reader.status == AVAssetReaderStatusUnknown)
@@ -255,16 +255,16 @@ final public class FDWaveformRenderOperation: Operation {
 
       let sampleCount = vDSP_Length(samplesToProcess)
 
-      //Convert 16bit int samples to floats
+      // Convert 16bit int samples to floats
       vDSP_vflt16(samples, 1, &processingBuffer, 1, sampleCount)
 
-      //Take the absolute values to get amplitude
+      // Take the absolute values to get amplitude
       vDSP_vabs(processingBuffer, 1, &processingBuffer, 1, sampleCount)
 
-      //Let current type further process the samples
+      // Let current type further process the samples
       format.type.process(normalizedSamples: &processingBuffer)
 
-      //Downsample and average
+      // Downsample and average
       var downSampledData = [Float](repeating: 0.0, count: downSampledLength)
       vDSP_desamp(processingBuffer,
                   vDSP_Stride(samplesPerPixel),

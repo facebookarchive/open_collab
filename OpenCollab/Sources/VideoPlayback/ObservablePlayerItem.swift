@@ -79,7 +79,7 @@ open class ObservablePlayerItem: AVPlayerItem {
     }
   }
 
-  public override func observeValue(forKeyPath keyPath: String?,
+  override public func observeValue(forKeyPath keyPath: String?,
                                     of object: Any?,
                                     change: [NSKeyValueChangeKey: Any]?,
                                     context: UnsafeMutableRawPointer?) {

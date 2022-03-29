@@ -1,9 +1,9 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
-import Foundation
 import AVFoundation
+import Foundation
 import Photos
+import UIKit
 
 class InitialRecordViewController: UIViewController {
   enum Constants {
@@ -136,7 +136,7 @@ class InitialRecordViewController: UIViewController {
     stopSpinner()
   }
 
-  public override func viewDidLayoutSubviews() {
+  override public func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
     let bounds = self.view.bounds

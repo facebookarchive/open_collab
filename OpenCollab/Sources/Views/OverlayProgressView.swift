@@ -53,7 +53,6 @@ class OverlayProgressView: UIView {
                    animations: {
                     self.progressBarGradientView.transform = .identity
     }, completion: nil)
-
   }
 
   func completeProgress(completion: (() -> Void)? = nil) {
@@ -97,7 +96,7 @@ extension OverlayProgressView {
     static let progressBarHeight: CGFloat = 6.0
     static let animationDuration: TimeInterval = 5.0
     static let animationCompleteDuration: TimeInterval = 0.6
-    static let gradientColors: [Any] =  [
+    static let gradientColors: [Any] = [
       UIColor(red: 0.929, green: 0.345, blue: 0.294, alpha: 1).cgColor,
       UIColor(red: 0.71, green: 0.318, blue: 0.644, alpha: 1).cgColor,
       UIColor(red: 0.553, green: 0.298, blue: 0.894, alpha: 1).cgColor,

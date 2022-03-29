@@ -37,7 +37,6 @@ class CoordinatedLooperGroup: NSObject, Looper {
       $0.play(itemTime: itemTime,
               syncTime: syncTime,
               syncClock: syncClock)
-
     }
   }
 
@@ -46,7 +45,6 @@ class CoordinatedLooperGroup: NSObject, Looper {
       $0.loop(loopTime: loopTime,
               loopDuration: loopDuration,
               syncClock: syncClock)
-
     }
   }
 

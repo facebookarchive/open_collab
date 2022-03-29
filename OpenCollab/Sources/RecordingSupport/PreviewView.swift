@@ -1,7 +1,7 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
 import AVFoundation
+import UIKit
 
 class PreviewView: UIView {
 

@@ -1,8 +1,8 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
 import AVFoundation
-import Foundation
 import BrightFutures
+import Foundation
 
 class AppHeadphoneManager {
   private struct Constants {
@@ -110,7 +110,7 @@ class AppHeadphoneManager {
     let block = { [self] in
       guard tokenForThisRequest == currentAudioSessionChangeRequestToken else { return }
       print("*AUDIO* Setting audio session for playback.")
-      
+
       let session = AVAudioSession.sharedInstance()
       do {
         guard tokenForThisRequest == currentAudioSessionChangeRequestToken else { return }
@@ -133,7 +133,6 @@ class AppHeadphoneManager {
       }
     }
   }
-
 
   @discardableResult
   func setAudioSessionForRecord(on queue: DispatchQueue? = nil) -> Future<Bool, Error> {
@@ -256,7 +255,7 @@ class AppHeadphoneManager {
 
   fileprivate func hasHeadphones(in routeDescription: AVAudioSessionRouteDescription) -> Bool {
     // Filter the outputs to only those with a port type of headphones.
-    return !routeDescription.outputs.filter({$0.portType == .headphones || $0.portType == .bluetoothA2DP || $0.portType == .usbAudio || $0.portType == .lineIn}).isEmpty
+    return !routeDescription.outputs.filter({ $0.portType == .headphones || $0.portType == .bluetoothA2DP || $0.portType == .usbAudio || $0.portType == .lineIn }).isEmpty
   }
 
   fileprivate func didChange() {
@@ -272,7 +271,7 @@ class AppHeadphoneManager {
   }
 }
 
-//For audio debugging, some thing you might want to investigate are:
+// For audio debugging, some thing you might want to investigate are:
 //  session.category == .playAndRecord
 //  session.mode == .videoRecording
 //  session.categoryOptions == .allowBluetoothA2DP

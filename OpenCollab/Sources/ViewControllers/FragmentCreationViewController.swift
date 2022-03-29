@@ -1,8 +1,8 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
 import BrightFutures
 import CoreMedia
+import UIKit
 
 protocol FragmentCreationViewControllerDelegate: NSObject {
   func select(viewController: FragmentCreationViewController, type: FragmentCreationViewController.SelectionType)

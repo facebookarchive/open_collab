@@ -32,7 +32,7 @@ class BeatSnapper: NSObject {
   }
 
   static func timePerBeat(BPM: Int) -> CMTime {
-    let secondsPerBeat = Constants.secondsPerMinute/Double(BPM)
+    let secondsPerBeat = Constants.secondsPerMinute / Double(BPM)
     return CMTimeMakeWithSeconds(Float64(secondsPerBeat), preferredTimescale: Constants.preferredTimescale)
   }
 

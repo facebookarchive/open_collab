@@ -20,11 +20,11 @@ enum MulticlipType {
     case .three:
       return [2]
     case .four:
-      return [2,3]
+      return [2, 3]
     case .five:
-      return [3,4]
+      return [3, 4]
     case .six:
-      return [4,5]
+      return [4, 5]
     }
   }
 
@@ -43,6 +43,6 @@ enum MulticlipType {
 
   static func typeForClipCount(clipCount: Int) -> MulticlipType {
     let clipMapping: [MulticlipType] = [.one, .two, .three, .four, .five, .six]
-    return clipMapping[clipCount-1]
+    return clipMapping[clipCount - 1]
   }
 }

@@ -46,7 +46,7 @@ class PlaybackDataModel {
   // Also will need to extend Collab to include a duration calculated using the durations of the
   // videos in the pool. Edit the following commented-out function to take in the desired input
   // type -- "fragmentInstance" here can be replaced by the input type, and
-  
+
 //  init(from collab: Collab) {
 //    self.collab = collab
 //    self.duration = collab.duration

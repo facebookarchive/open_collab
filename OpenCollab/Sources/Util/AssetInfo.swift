@@ -17,7 +17,7 @@ enum AssetInfo {
         return false
     }
   }
-  
+
   var loggingID: String {
     switch self {
       case .empty:

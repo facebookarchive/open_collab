@@ -34,7 +34,7 @@ struct Fatal {
   /// Use for experience breaking bugs, this should crash in production.
   /// - Parameter string: Description of error
   static func safeError(_ string: String? = nil) -> Never {
-    Thread.callStackSymbols.forEach {print($0)}
+    Thread.callStackSymbols.forEach { print($0) }
     print(string ?? "")
     fatalError(string ?? "")
   }
@@ -42,7 +42,7 @@ struct Fatal {
   /// Use for non-experience breaking bugs, this should assert in debug builds but not in production.
   /// - Parameter string: Description of assert
   static func safeAssert(_ string: String? = nil) {
-    Thread.callStackSymbols.forEach {print($0)}
+    Thread.callStackSymbols.forEach { print($0) }
     print(string ?? "")
     assertionFailure(string ?? "")
   }

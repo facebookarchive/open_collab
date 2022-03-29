@@ -177,11 +177,11 @@ class MetronomeEditViewController: UIViewController {
   }
 
   fileprivate func didLongPressButton(gesture: UILongPressGestureRecognizer, button: UIButton, selector: Selector) {
-    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread")}
+    guard Thread.isMainThread else { Fatal.safeError("Should be called on main thread") }
     switch gesture.state {
     case .began:
       button.isHighlighted = true
-      self.longPressTimer = Timer.init(timeInterval: 0.1, target: self, selector: selector, userInfo: nil, repeats: true)
+      self.longPressTimer = Timer(timeInterval: 0.1, target: self, selector: selector, userInfo: nil, repeats: true)
       guard let timer = longPressTimer else { return }
       let runLoop = RunLoop.current
       runLoop.add(timer, forMode: RunLoop.Mode.default)

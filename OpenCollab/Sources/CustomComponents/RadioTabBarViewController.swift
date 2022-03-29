@@ -37,7 +37,6 @@ class RadioTabBarControlView: UIView {
     self.tabs = tabs
     super.init(frame: .zero)
     configureUI()
-
   }
 
   required init?(coder: NSCoder) {

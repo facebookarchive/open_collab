@@ -1,10 +1,10 @@
 //
 // Copyright 2013 - 2017, William Entriken and the FDWaveformView contributors.
 //
-import UIKit
-import MediaPlayer
-import AVFoundation
 import Accelerate
+import AVFoundation
+import MediaPlayer
+import UIKit
 
 // FROM http://stackoverflow.com/questions/5032775/drawing-waveform-with-avassetreader
 // DO SEE http://stackoverflow.com/questions/1191868/uiimageview-scaling-interpolation
@@ -50,7 +50,7 @@ open class FDWaveformView: UIView {
   }
 
   /// The samples to be highlighted in a different color
-  open var highlightedSamples: CountableRange<Int>? = nil {
+  open var highlightedSamples: CountableRange<Int>? {
     didSet {
       guard totalSamples > 0 else {
         return
@@ -96,7 +96,7 @@ open class FDWaveformView: UIView {
   open var doesAllowScroll = true
 
   /// Supported waveform types
-  //TODO: make this public after reconciling FDWaveformView.WaveformType and FDWaveformType
+  // TODO: make this public after reconciling FDWaveformView.WaveformType and FDWaveformType
   enum WaveformType {
     case linear, logarithmic
   }
@@ -123,7 +123,7 @@ open class FDWaveformView: UIView {
     }
   }
 
-  //TODO: MAKE PUBLIC
+  // TODO: MAKE PUBLIC
 
   /// The portion of extra pixels to render left and right of the viewable region
   private var horizontalBleedTarget = 0.5
@@ -197,7 +197,7 @@ open class FDWaveformView: UIView {
   }
 
   /// Waveform type for rendering waveforms
-  //TODO: make this public after reconciling FDWaveformView.WaveformType and FDWaveformType
+  // TODO: make this public after reconciling FDWaveformView.WaveformType and FDWaveformType
   var waveformRenderType: FDWaveformType {
     get {
       switch waveformType {
@@ -218,7 +218,7 @@ open class FDWaveformView: UIView {
   }
 
   /// View for rendered waveform
-  lazy fileprivate var imageView: UIImageView = {
+  fileprivate lazy var imageView: UIImageView = {
     let retval = UIImageView(frame: CGRect.zero)
     retval.contentMode = .scaleToFill
     retval.tintColor = self.wavesColor
@@ -226,7 +226,7 @@ open class FDWaveformView: UIView {
   }()
 
   /// View for rendered waveform showing progress
-  lazy fileprivate var highlightedImage: UIImageView = {
+  fileprivate lazy var highlightedImage: UIImageView = {
     let retval = UIImageView(frame: CGRect.zero)
     retval.contentMode = .scaleToFill
     retval.tintColor = self.progressColor
@@ -283,7 +283,7 @@ open class FDWaveformView: UIView {
     addGestureRecognizer(tapRecognizer)
   }
 
-  required public init?(coder aCoder: NSCoder) {
+  public required init?(coder aCoder: NSCoder) {
     super.init(coder: aCoder)
     setup()
   }
@@ -459,7 +459,7 @@ open class FDWaveformView: UIView {
   }
 }
 
-//TODO: make this public after reconciling FDWaveformView.WaveformType and FDWaveformType
+// TODO: make this public after reconciling FDWaveformView.WaveformType and FDWaveformType
 enum FDWaveformType: Equatable {
   /// Waveform is rendered using a linear scale
   case linear
@@ -500,7 +500,7 @@ enum FDWaveformType: Equatable {
         var zero: Float = 32768.0
         vDSP_vdbcon(normalizedSamples, 1, &zero, &normalizedSamples, 1, vDSP_Length(normalizedSamples.count), 1)
 
-        //Clip to [noiseFloor, 0]
+        // Clip to [noiseFloor, 0]
         var ceil: Float = 0.0
         var noiseFloorFloat = Float(noiseFloor)
         vDSP_vclip(normalizedSamples, 1, &noiseFloorFloat, &ceil, &normalizedSamples, 1, vDSP_Length(normalizedSamples.count))

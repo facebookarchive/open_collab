@@ -2,10 +2,10 @@
 
 import AVFoundation
 import AVKit
+import BrightFutures
 import CoreMedia
 import Foundation
 import UIKit
-import BrightFutures
 
 protocol PlaybackCoordinatorDelegate: NSObjectProtocol {
   func looped(atTime: CMTime, loopCount: Int)
@@ -60,7 +60,7 @@ class PlaybackCoordinator: NSObject {
 
   // MARK: - Properties - Delegation
 
-  weak public var delegate: PlaybackCoordinatorDelegate?
+  public weak var delegate: PlaybackCoordinatorDelegate?
 
   // MARK: - Init
 
@@ -174,7 +174,7 @@ class PlaybackCoordinator: NSObject {
   }
 
   // MARK: - KVO
-  public override func observeValue(
+  override public func observeValue(
     forKeyPath keyPath: String?,
     of object: Any?,
     change: [NSKeyValueChangeKey: Any]?,

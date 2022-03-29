@@ -1,7 +1,7 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import BrightFutures
 import AVFoundation
+import BrightFutures
 
 struct RecordingAuthorizer {
   static func isAuthorized() -> Future<RecordingAuthorizationStatus, AssetError> {

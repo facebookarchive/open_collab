@@ -1,7 +1,7 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
 import FlexLayout
+import UIKit
 
 class LayoutEngineViewController: UIViewController {
 
@@ -119,4 +119,3 @@ class LayoutEngineViewController: UIViewController {
     flexContainerView.flex.layout()
   }
 }
-

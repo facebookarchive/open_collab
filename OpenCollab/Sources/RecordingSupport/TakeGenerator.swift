@@ -78,7 +78,7 @@ class TakeGenerator: NSObject {
   }
 
   public static func cropFragment(fragment: FragmentHost, clipIndex: Int, numberOfClips: Int) -> Future<FragmentHost, RasterizationError> {
-    guard let userRecordedURL = fragment.assetInfo.userRecordedURL else { return Future(error: RasterizationError.InputFileDoesNotExists)}
+    guard let userRecordedURL = fragment.assetInfo.userRecordedURL else { return Future(error: RasterizationError.InputFileDoesNotExists) }
     return Future<FragmentHost, RasterizationError> { complete in
       fragment.asset().onSuccess { asset in
         let userRecordedAsset: AVURLAsset = asset ?? AVURLAsset(url: userRecordedURL)
@@ -127,7 +127,7 @@ class TakeGenerator: NSObject {
       }
     }
   }
-  
+
   fileprivate func generate(sourceURL: URL, sourceAsset: AVURLAsset, timeRange: CMTimeRange) {
     print("Generating takes for time range \(timeRange.start.seconds) to \(timeRange.end.seconds), and asset of length \(sourceAsset.duration.seconds)")
     let exportInfos: [ExportInfo]

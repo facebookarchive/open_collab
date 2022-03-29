@@ -87,7 +87,7 @@ class Rasterizer {
     guard validAssetTuples.count > 0, let minDuration = (validAssetTuples.compactMap { asset, _ in
       asset?.duration
     }.min()) else { return Future(error: .General(nil)) }
-    
+
     let timeRange = CMTimeRangeMake(start: CMTime.zero, duration: minDuration)
 
     let mixComposition = AVMutableComposition()
@@ -123,9 +123,9 @@ class Rasterizer {
       var clipWidth = needsWidthCropping ? croppingWidth : incomingClipSize.width
 
       let notEnoughHeight = targetHeight > incomingClipSize.height
-      let wrongAspectRatio = targetHeight/targetWidth != incomingClipSize.height/incomingClipSize.width
+      let wrongAspectRatio = targetHeight / targetWidth != incomingClipSize.height / incomingClipSize.width
       let exactlyEnoughWidth = targetWidth == incomingClipSize.width
-      if (notEnoughHeight || (!needsWidthCropping && wrongAspectRatio && !exactlyEnoughWidth)) {
+      if notEnoughHeight || (!needsWidthCropping && wrongAspectRatio && !exactlyEnoughWidth) {
         let fittedSize = AspectRatioCalculator.collabSizeThatFits(size: incomingClipSize)
         croppingWidth = fittedSize.width
         needsWidthCropping = true
@@ -142,7 +142,7 @@ class Rasterizer {
       let finalTransform = transform.concatenating(scaleTransform.concatenating(moveTransform))
 
       let layerInstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: videoCompositionTrack)
-      let cropRect = CGRect(x: incomingClipFrame.midX - clipWidth/2.0, y: max(0, incomingClipFrame.midY - croppingHeight/2.0), width: clipWidth, height: croppingHeight)
+      let cropRect = CGRect(x: incomingClipFrame.midX - clipWidth / 2.0, y: max(0, incomingClipFrame.midY - croppingHeight / 2.0), width: clipWidth, height: croppingHeight)
 
       layerInstruction.setCropRectangle(cropRect, at: .zero)
       layerInstruction.setTransform(finalTransform, at: CMTime.zero)
@@ -300,7 +300,7 @@ extension Rasterizer {
 
     let transform = assetVideoTrack.preferredTransform.translatedBy(x: -(correctedNaturalSize.width - width) / 2.0, y: -(correctedNaturalSize.height - clipHeight) / 2.0)
     let layerInstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: videoCompositionTrack)
-    let cropRect = CGRect(x: videoFrame.midX - width/2.0, y: videoFrame.midY - clipHeight/2.0, width: width, height: clipHeight)
+    let cropRect = CGRect(x: videoFrame.midX - width / 2.0, y: videoFrame.midY - clipHeight / 2.0, width: width, height: clipHeight)
     layerInstruction.setCropRectangle(cropRect, at: .zero)
     layerInstruction.setTransform(transform, at: CMTime.zero)
 

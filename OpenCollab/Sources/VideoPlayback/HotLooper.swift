@@ -1,9 +1,9 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
 import AVFoundation
 import CoreMedia
 import Foundation
+import UIKit
 
 protocol HotLooperDelegate: NSObjectProtocol {
   func looped(atTime: CMTime, loopCount: Int)
@@ -72,7 +72,7 @@ class HotLooper: NSObject {
 
   // MARK: - Properties - Delegation
 
-  weak public var delegate: HotLooperDelegate?
+  public weak var delegate: HotLooperDelegate?
 
   // MARK: Looper Management
 

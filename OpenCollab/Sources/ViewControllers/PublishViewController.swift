@@ -1,9 +1,9 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
-import CoreMedia
-import BrightFutures
 import AVKit
+import BrightFutures
+import CoreMedia
+import UIKit
 
 class PublishViewController: UIViewController {
 
@@ -11,7 +11,7 @@ class PublishViewController: UIViewController {
 
   fileprivate let fragments: [FragmentHost]
   fileprivate let duration: CMTime
-  
+
   fileprivate var viewDidDisappear = true
 
   // MARK: - UI
@@ -134,7 +134,7 @@ class PublishViewController: UIViewController {
   fileprivate func setupActions() {
     saveButton.addTarget(self, action: #selector(didSelectCameraRollButton(_:)), for: .touchUpInside)
     self.view.addSubview(saveButton)
-    
+
     NSLayoutConstraint.activate([
       saveButton.heightAnchor.constraint(equalToConstant: Constants.saveButtonHeight),
       saveButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,
@@ -165,7 +165,7 @@ class PublishViewController: UIViewController {
     for fragment in fragments {
       contentStackView.addArrangedSubview(fragment.hostView)
     }
-    layoutEngine.configurePlaybackViewCells(playbackViews: fragments.map{ $0.hostView })
+    layoutEngine.configurePlaybackViewCells(playbackViews: fragments.map { $0.hostView })
     setupActions()
 
     self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate),
@@ -178,19 +178,19 @@ class PublishViewController: UIViewController {
   @objc fileprivate func didTapClose() {
     self.navigationController?.popViewController(animated: true)
   }
-  
+
   fileprivate func startSpinner() {
     self.spinner.alpha = 1.0
     self.buildOverlayIfNeeded()
     self.spinner.startAnimating()
   }
-  
+
   fileprivate func removeSpinner() {
     self.spinner.alpha = 0.0
     self.overlay = nil
     self.spinner.stopAnimating()
   }
-  
+
   fileprivate func buildOverlayIfNeeded() {
     if spinner.superview == nil {
       spinner.translatesAutoresizingMaskIntoConstraints = false
@@ -256,7 +256,7 @@ class PublishViewController: UIViewController {
 // MARK: - Publishing
 
 extension PublishViewController {
-  
+
   fileprivate func extractAssetsAndVolumes(fragments: [FragmentHost?]) -> Future<[(AVURLAsset?, Float)], AssetError> {
     return fragments.compactMap { $0 }.map { fragment in
       fragment.asset(allowManualSyncing: false).map { asset in
@@ -271,7 +271,7 @@ extension PublishViewController {
       return
     }
     self.startSpinner()
-    
+
     let exportInfos = fragments.map { (fragment) -> ExportInfo in
       // Calculate a new fragment so that the start and end of the asset are the playback times.
       // We are essentially hard applying the edit by creating a new copy of the asset.
@@ -300,11 +300,11 @@ extension PublishViewController {
           // ## TODO : Add share sheet customization as needed, including the option to
           // exit or restart the creation flow once sharing is complete
           self.present(UIActivityViewController(activityItems: [url], applicationActivities: nil), animated: true, completion: nil)
-      }.onFailure { (error) in
+        }.onFailure { (error) in
         self.removeSpinner()
         Alert.show(in: self, title: "Error", message: "Can't export \(error.localizedDescription)")
         print("ERROR: Failed to rasterize collab for share sheet.")
-      }
+        }
     }
   }
 }

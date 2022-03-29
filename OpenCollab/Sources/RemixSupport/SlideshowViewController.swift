@@ -14,9 +14,9 @@ protocol SlideshowViewControllerDelegate: AnyObject {
 
 struct SlideView {
   var view: UIView
-  var thumbnailURL: String? = nil
-  var thumbnailImage: UIImageView? = nil
-  var takeNumber: Int? = nil
+  var thumbnailURL: String?
+  var thumbnailImage: UIImageView?
+  var takeNumber: Int?
 }
 
 class SlideshowViewController: UIViewController, UIScrollViewDelegate {
@@ -130,7 +130,7 @@ class SlideshowViewController: UIViewController, UIScrollViewDelegate {
   func insertSlide(view slide: SlideView, index: Int = 0) {
     slideViews.insert(slide, at: index)
     scrollView.addSubview(slide.view)
-    scrollView.contentOffset = CGPoint(x: 0.0, y: 0.0)
+    scrollView.contentOffset = CGPoint.zero
 
     self.view.setNeedsLayout()
     self.view.layoutIfNeeded()
@@ -139,7 +139,7 @@ class SlideshowViewController: UIViewController, UIScrollViewDelegate {
   func appendSlide(view slide: SlideView) {
     slideViews.append(slide)
     scrollView.addSubview(slide.view)
-    scrollView.contentOffset = CGPoint(x: 0.0, y: 0.0)
+    scrollView.contentOffset = CGPoint.zero
 
     self.view.setNeedsLayout()
     self.view.layoutIfNeeded()
@@ -231,7 +231,6 @@ class SlideshowViewController: UIViewController, UIScrollViewDelegate {
                                     y: isHorizontal ? 0.0 : CGFloat(i) * scrollViewBounds.height,
                                     width: isHorizontal ? scrollViewBounds.width - slidePadding : scrollViewBounds.width,
                                     height: isHorizontal ? scrollViewBounds.height : scrollViewBounds.height - slidePadding)
-
     }
 
     scrollToIndex(index: setIndex, animated: false)
@@ -274,8 +273,7 @@ class SlideshowViewController: UIViewController, UIScrollViewDelegate {
   }
 
   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-    if !decelerate
-    {
+    if !decelerate {
       scrollEnded()
       notify(previewOnly: false)
     }

@@ -233,7 +233,6 @@ extension QueuePlayerLooper: HotPlayerDelegate {
       print(self.hashValue,
                         "Player preheat complete for a player but the QPL is no longer preheating.")
       return
-
     }
 
     isPreheating = false

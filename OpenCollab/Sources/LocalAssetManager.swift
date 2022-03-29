@@ -1,7 +1,7 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import BrightFutures
 import AVFoundation
+import BrightFutures
 
 class LocalAssetManager: NSObject {
 
@@ -30,9 +30,9 @@ class LocalAssetManager: NSObject {
     loadedAssetsCache.countLimit = 30
     loadedAssetsCache.evictsObjectsWithDiscardedContent = true
   }
-  
+
   // MARK: - Public Methods
-  
+
   func getAsset(fragment: FragmentHost) -> Future<AVURLAsset?, AssetError> {
     let assetInfo = fragment.assetInfo
     switch assetInfo {
@@ -56,7 +56,7 @@ class LocalAssetManager: NSObject {
     // Download asset to disk
     preloadLocalAsset(fragment: remoteFragment)
   }
-  
+
   func preloadLocalAsset(fragment: Fragment) {
     _ = getDownloadedAsset(fragment: fragment,
                            isPreload: true)
@@ -128,7 +128,7 @@ class LocalAssetManager: NSObject {
   }
 
   fileprivate var assetLoadingCache = [String: Future<AVURLAsset, AssetError>]()
-  
+
   func getOrLoadAsset(URL: URL) -> Future<AVURLAsset, AssetError> {
     assert(Thread.isMainThread)
 
@@ -179,7 +179,7 @@ class LocalAssetManager: NSObject {
 
     return target
   }
-  
+
   func rasterizationDirectory() -> URL {
     let url = assetsDirectory.appendingPathComponent("export", isDirectory: true)
     let fileManager = FileManager.default

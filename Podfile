@@ -12,5 +12,6 @@ target 'OpenCollab' do
   pod 'BrightFutures', '~> 8.0'
   pod 'Kingfisher', '~> 7.0'
   pod 'FlexLayout'
+  pod 'SwiftLint'
 
 end

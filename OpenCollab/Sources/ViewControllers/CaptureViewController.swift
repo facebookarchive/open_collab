@@ -123,7 +123,6 @@ class CaptureViewController: UIViewController {
       Fatal.safeError("RecordingAuthorizer should not fail")
     }
 
-
     configureSession()
   }
 
@@ -136,7 +135,7 @@ class CaptureViewController: UIViewController {
         self.addObservers()
         self.session.startRunning()
         self.isSessionRunning = self.session.isRunning
-          
+
       case SessionSetupResult.notAuthorized(let status):
         DispatchQueue.main.async {
           RecordingAuthorizer.showUnauthorizedAlert(vc: self, status: status)

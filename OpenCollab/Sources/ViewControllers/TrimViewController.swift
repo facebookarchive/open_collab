@@ -117,13 +117,12 @@ class TrimViewController: UIViewController {
     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
     self.present(alert, animated: true)
-
   }
 }
 
 // MARK: - TrimActionViewControllerDelegate
 
-extension TrimViewController : CollabTrimmerViewControllerDelegate {
+extension TrimViewController: CollabTrimmerViewControllerDelegate {
   func didStartProgressDrag() {
     previewView.pause()
   }
@@ -195,11 +194,9 @@ extension TrimViewController : CollabTrimmerViewControllerDelegate {
   }
 
   func displayMaxTrimNotice() {
-
   }
 
   func displayMinTrimNotice() {
-
   }
 }
 

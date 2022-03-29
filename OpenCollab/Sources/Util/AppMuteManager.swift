@@ -1,7 +1,7 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import Foundation
 import AVFoundation
+import Foundation
 
 class AppMuteManager {
 
@@ -26,7 +26,7 @@ class AppMuteManager {
 
   init() {
     // com.apple.springboard.ringerstate shifted by 1
-    var array: [Int8] =  [100, 112, 110, 47, 98, 113, 113, 109, 102, 47, 116, 113, 115, 106, 111, 104, 99, 112, 98, 115, 101, 47, 115, 106, 111, 104, 102, 115, 116, 117, 98, 117, 102, 1]
+    var array: [Int8] = [100, 112, 110, 47, 98, 113, 113, 109, 102, 47, 116, 113, 115, 106, 111, 104, 99, 112, 98, 115, 101, 47, 115, 106, 111, 104, 102, 115, 116, 117, 98, 117, 102, 1]
 
     for i in 0..<array.count {
       array[i] = array[i] - 1
@@ -88,7 +88,7 @@ class AppMuteManager {
 
   fileprivate func getHardwareState() -> MuteState? {
     var state: UInt64 = 0
-    
+
     // ## TODO : get mute state and return nil if it's not valid
 
     return (state == 0) ? MuteState.Muted : MuteState.NotMuted

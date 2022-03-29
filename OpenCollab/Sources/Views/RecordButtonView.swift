@@ -1,8 +1,8 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
-import Foundation
 import CoreGraphics
+import Foundation
+import UIKit
 
 class RecordButtonView: UIView {
 

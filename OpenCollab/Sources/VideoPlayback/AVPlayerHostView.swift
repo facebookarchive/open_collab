@@ -1,7 +1,7 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
 import AVFoundation
+import UIKit
 
 class AVPlayerHostView: UIView {
 
@@ -61,7 +61,7 @@ class AVPlayerHostView: UIView {
 
   var waitingToBeAttached = false
 
-  public override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     imageView = UIImageView()
     imageView.clipsToBounds = true
     imageView.contentMode = .scaleAspectFill

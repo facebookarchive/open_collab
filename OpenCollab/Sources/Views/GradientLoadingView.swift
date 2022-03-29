@@ -6,13 +6,13 @@ class GradientLoadingView: UIView {
 
   fileprivate enum Constants {
     static let animationDuration: TimeInterval = 0.7
-    static let gradientColors: [CGColor] =  [
+    static let gradientColors: [CGColor] = [
       UIColor(red: 0.929, green: 0.345, blue: 0.294, alpha: 1).cgColor,
       UIColor(red: 0.71, green: 0.318, blue: 0.644, alpha: 1).cgColor,
       UIColor(red: 0.553, green: 0.298, blue: 0.894, alpha: 1).cgColor,
       UIColor(red: 0.31, green: 0.471, blue: 0.917, alpha: 1).cgColor
     ]
-    static let gradientStartPosition = CGPoint(x: 0, y: 0)
+    static let gradientStartPosition = CGPoint.zero
     static let gradientEndPosition = CGPoint(x: 1, y: 1)
   }
 

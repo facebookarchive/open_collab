@@ -1,47 +1,47 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
 import AVFoundation
 import Kingfisher
+import UIKit
 
 @UIApplicationMain
   class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     enum Constants {
       static let minDiskSpaceRequiredInBytes: Int = 100 * 1024 * 1024
     }
 
   var window: UIWindow?
-  static private(set) var fragmentAssetManager: LocalAssetManager?
+  private(set) static var fragmentAssetManager: LocalAssetManager?
   static let avSessionQueue = DispatchQueue(label: "com.openCollab.avsession")
 
   override init() {
     super.init()
   }
-    
+
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     configureAudioSession()
 
     UINavigationBar.appearance().barTintColor = UIColor.black
     UINavigationBar.appearance().tintColor = .black
-    
+
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.overrideUserInterfaceStyle = .light
     AppDelegate.fragmentAssetManager = LocalAssetManager()
-    
+
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let creationLaunchScreenViewController = storyboard
       .instantiateViewController(withIdentifier: "CreationLaunchScreen") as! CreationLaunchScreenViewController
-    
+
     let navViewController = UINavigationController(rootViewController: creationLaunchScreenViewController)
     navViewController.modalPresentationStyle = .fullScreen
-     
+
     window?.rootViewController = navViewController
     window?.makeKeyAndVisible()
-    
+
     checkRemainingDiskSpace()
     beginSession()
-    
+
     return true
   }
 
@@ -59,7 +59,7 @@ import Kingfisher
     AppHeadphoneManager.shared.updateHeadphoneState()
     AppHeadphoneManager.shared.updateHeadphoneType()
   }
-    
+
   fileprivate func beginSession() {
     // ## Do any other session handling here
     configureKingfisherCache()
@@ -72,7 +72,7 @@ import Kingfisher
     cache.memoryStorage.config.totalCostLimit = 25 * 1024 * 1024
     cache.memoryStorage.config.countLimit = 40
   }
-    
+
   // MARK: - Disk Space Handling
   fileprivate func checkRemainingDiskSpace() {
     DispatchQueue.global(qos: .background).async {

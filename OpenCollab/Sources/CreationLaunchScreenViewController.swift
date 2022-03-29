@@ -7,8 +7,7 @@ class CreationLaunchScreenViewController: UIViewController {
   @IBOutlet weak var creationStackView: UIStackView!
   @IBOutlet weak var createButtonText: UILabel!
   @IBOutlet weak var createButton: UIButton!
-  
-  
+
   // MARK: - UIViewController
 
   override func viewDidLoad() {
@@ -24,7 +23,7 @@ class CreationLaunchScreenViewController: UIViewController {
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
   }
-  
+
   fileprivate func setupGradient() {
     gradientView.gradientLayer.setupFullScreenCollabGradientLayer()
   }
@@ -36,7 +35,7 @@ class CreationLaunchScreenViewController: UIViewController {
     self.navigationController?.pushViewController(initialRecordViewController, animated: true)
     initialRecordViewController.navigationItem.hidesBackButton = false
   }
-  
+
   @objc func didTapSettings(_ sender: Any) {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let settingsViewController = storyboard

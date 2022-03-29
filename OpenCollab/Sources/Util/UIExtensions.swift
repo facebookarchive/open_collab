@@ -1,10 +1,8 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-import UIKit
 import Foundation
-//import CoreMedia
-
-
+import UIKit
+// import CoreMedia
 
 extension UIImage {
   convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
@@ -18,7 +16,7 @@ extension UIImage {
     guard let cgImage = image?.cgImage else { return nil }
     self.init(cgImage: cgImage)
   }
-  
+
   func translucentImageWithAlpha(alpha: CGFloat) -> UIImage {
 
     UIGraphicsBeginImageContextWithOptions(self.size, false, 0.0)
@@ -41,7 +39,7 @@ extension UIColor {
       alpha: a
     )
   }
-  
+
   convenience init(rgb: Int, a: CGFloat = 1.0) {
     self.init(
       red: (rgb >> 16) & 0xFF,
