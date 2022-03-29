@@ -462,6 +462,7 @@
 				DFFA0A1C27AB8B0200DD73EA /* Frameworks */,
 				DFFA0A1D27AB8B0200DD73EA /* Resources */,
 				1246B27F4C0F325BFEA2BE75 /* [CP] Embed Pods Frameworks */,
+				32FBD7DE27F3A62000302C73 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -544,6 +545,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpenCollab/Pods-OpenCollab-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		32FBD7DE27F3A62000302C73 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:./Pods/SwiftLint/\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		3A445E785FE9617B41535985 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
