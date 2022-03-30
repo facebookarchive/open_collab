@@ -22,6 +22,7 @@ class MulticastDelegate <T> {
 
   func invoke(invocation: (T) -> Void) {
     for delegate in delegates.allObjects.reversed() {
+      // swiftlint:disable:next force_cast
       invocation(delegate as! T)
     }
   }

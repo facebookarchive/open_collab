@@ -275,6 +275,7 @@ class HotLooper: NSObject {
     // TODO : We could make this 1/300th of a second so that we are accurate up
     // to 1/600th of a second, which is what we are aiming for.
     loopTimer?.tolerance = .zero
+    // swiftlint:disable:next force_unwrapping
     RunLoop.current.add(loopTimer!, forMode: .common)
 
     print(self.hash, "Dispatching a loop that should loop at: \(CMTimeAdd(loopStartTime, bufferedLoopInterval).toSeconds())")

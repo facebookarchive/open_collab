@@ -83,7 +83,7 @@ class ClipsTrayCollectionViewController: UICollectionViewController, UICollectio
 
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ClipsTrayCollectionViewCell.reuseId,
-                                                  for: indexPath) as! ClipsTrayCollectionViewCell
+                                                  for: indexPath) as! ClipsTrayCollectionViewCell // swiftlint:disable:this force_cast
     let slide = slideViews[indexPath.row]
     cell.configureCell(slide: slide, enabled: clipSelectionEnabled)
     return cell

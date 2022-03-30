@@ -207,7 +207,7 @@ final class HotPlayer: NSObject {
     }
 
     DispatchQueue.main.asyncAfter(deadline: .now() + waitTime.toSeconds(),
-                                  execute: playWorkItem!)
+                                  execute: playWorkItem!) // swiftlint:disable:this force_unwrapping
   }
 
   private func prepareToPlay() {
@@ -370,6 +370,7 @@ final class HotPlayer: NSObject {
   }
 
   @objc func onItemRateChanged(_ sender: Notification) {
+    // swiftlint:disable:next force_cast
     let changedRate = CMTimebaseGetRate(sender.object as! CMTimebase)
     guard changedRate == 0.0 else { return }
 

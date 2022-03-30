@@ -77,6 +77,7 @@ struct RecordingAuthorizer {
     alertController.addAction(UIAlertAction(title: "Settings",
                                             style: .`default`,
                                             handler: { _ in
+                                              // swiftlint:disable:next force_unwrapping
                                               UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!,
                                                                         options: [:],
                                                                         completionHandler: nil)

@@ -30,7 +30,7 @@ class FileUtil {
     let outputFileName = NSUUID().uuidString
     let outputFilePath = (NSTemporaryDirectory() as NSString)
       .appendingPathComponent((outputFileName as NSString)
-        .appendingPathExtension("mp4")!)
+        .appendingPathExtension("mp4")!) // swiftlint:disable:this force_unwrapping
     return URL(fileURLWithPath: outputFilePath)
   }
 }

@@ -87,7 +87,7 @@ class VolumeViewController: UIViewController {
     setupVolumeIndicator()
 
     panGesture = UIPanGestureRecognizer(target: self, action: #selector(pan(gesture:)))
-    self.view.addGestureRecognizer(panGesture!)
+    self.view.addGestureRecognizer(panGesture!) // swiftlint:disable:this force_unwrapping
   }
 
   fileprivate func setupVolumeIndicator() {

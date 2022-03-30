@@ -154,7 +154,7 @@ class TakeGenerator: NSObject {
       exportInfos = self.calculateExportInfos(URL: sourceURL,
                                               asset: sourceAsset,
                                               recordedTimeRange: timeRange,
-                                              takeDuration: takeDuration!)
+                                              takeDuration: takeDuration!) // swiftlint:disable:this force_unwrapping
     }
 
     assetCopier = AssetCopier(exportInfos: exportInfos)

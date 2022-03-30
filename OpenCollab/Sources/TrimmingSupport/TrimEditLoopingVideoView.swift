@@ -36,8 +36,10 @@ final class TrimEditLoopingVideoView: UIView {
     cleanUp()
     self.asset = asset
     playerItem = AVPlayerItem(asset: asset)
+    // swiftlint:disable:next force_unwrapping
     player = AVQueuePlayer(items: [playerItem!])
     if let player = player {
+      // swiftlint:disable:next force_unwrapping
       playerLooper = AVPlayerLooper(player: player, templateItem: playerItem!)
     }
     playerLayer = AVPlayerLayer(player: player)

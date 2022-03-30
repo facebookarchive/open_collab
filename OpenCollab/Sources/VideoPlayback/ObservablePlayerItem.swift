@@ -82,7 +82,7 @@ open class ObservablePlayerItem: AVPlayerItem {
     }
   }
 
-  // swiftlint:disable block_based_kvo
+  // swiftlint:disable:next block_based_kvo
   override public func observeValue(forKeyPath keyPath: String?,
                                     of object: Any?,
                                     change: [NSKeyValueChangeKey: Any]?,
@@ -101,7 +101,7 @@ open class ObservablePlayerItem: AVPlayerItem {
 
       // Get the status change from the change dictionary
       if let statusNumber = change?[.newKey] as? NSNumber {
-        status = AVPlayerItem.Status(rawValue: statusNumber.intValue)!
+        status = AVPlayerItem.Status(rawValue: statusNumber.intValue)! // swiftlint:disable:this force_unwrapping
       } else {
         status = .unknown
       }

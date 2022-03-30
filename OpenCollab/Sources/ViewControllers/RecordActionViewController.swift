@@ -372,7 +372,7 @@ class RecordActionViewController: UIViewController {
     metronomeAnimationOverlay.layer.cornerRadius = Constants.flipCameraButtonSize / 2.0
     metronomeAnimationOverlay.alpha = 0.0
     metronomeButton.insertSubview(metronomeAnimationOverlay,
-                                  belowSubview: metronomeButton.imageView!)
+                                  belowSubview: metronomeButton.imageView!) // swiftlint:disable:this force_unwrapping
     metronomeButton.highlightedColor = metronomeAnimationOverlay.backgroundColor?.withAlphaComponent(0.6)
 
     nextButton.setBackgroundColor(.white, for: .normal)

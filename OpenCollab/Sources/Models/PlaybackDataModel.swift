@@ -124,7 +124,7 @@ class PlaybackDataModel {
     for _ in 1...Collab.Constants.minClipsPerCollab {
       selectedFragments.append(FragmentHost(fragment: recordedFragment))
     }
-    self.takeFragments = [selectedFragments.first!]
+    self.takeFragments = [selectedFragments.first!] // swiftlint:disable:this force_unwrapping
     self.duration = trimmerModel.duration
   }
 
@@ -133,7 +133,7 @@ class PlaybackDataModel {
   }
 
   func buildCombinedFragments() -> [FragmentHost] {
-    let fragments = recordFragment != nil ? [recordFragment!] : []
+    let fragments = recordFragment != nil ? [recordFragment!] : [] // swiftlint:disable:this force_unwrapping
     return fragments + takeFragments.reversed() + poolFragments
   }
 

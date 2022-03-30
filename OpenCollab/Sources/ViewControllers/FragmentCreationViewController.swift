@@ -160,9 +160,10 @@ class FragmentCreationViewController: UIViewController {
 
     if editable {
       self.playbackEditor = PlaybackEditor(fragment: fragment)
-      self.fragment.addListener(listener: playbackEditor!)
+      self.fragment.addListener(listener: playbackEditor!) // swiftlint:disable:this force_unwrapping
       self.playbackEditor?.delegate = self
       if !self.firstClip {
+        // swiftlint:disable:next force_unwrapping
         self.nudgeViewController = NudgeViewController(playbackEditor: playbackEditor!, saveNudgeCompletion: saveNudge)
       }
     }
@@ -272,6 +273,7 @@ class FragmentCreationViewController: UIViewController {
       UITapGestureRecognizer(target: self,
                              action: #selector(didSelect(_:)))
     selectionGestureRecognizer?.numberOfTouchesRequired = 1
+    // swiftlint:disable:next force_unwrapping
     selectionOverlayView.addGestureRecognizer(selectionGestureRecognizer!)
   }
 
@@ -290,6 +292,7 @@ class FragmentCreationViewController: UIViewController {
   func addManagedSubview(view: UIView) {
     managedSubview?.removeFromSuperview()
     managedSubview = view
+    // swiftlint:disable:next force_unwrapping
     self.view.addSubview(managedSubview!)
     self.view.setNeedsLayout()
   }

@@ -37,7 +37,7 @@ class InitialRecordViewController: UIViewController {
   }
   fileprivate lazy var metronomeHeadphoneView: UILabel =
     UINib(nibName: "MetronomeHeadphoneView", bundle: nil)
-      .instantiate(withOwner: nil, options: nil)[0] as! UILabel
+      .instantiate(withOwner: nil, options: nil)[0] as! UILabel // swiftlint:disable:this force_cast
   fileprivate var metronomeIsPlaying: Bool = false
   fileprivate var isRecording = false {
     didSet {
@@ -201,7 +201,7 @@ class InitialRecordViewController: UIViewController {
     })
     let firstTakeCountDownTime = countDownTime.toSeconds() * Double(TakeViewController.countdownTimerLimit)
     DispatchQueue.main.asyncAfter(deadline: .now() + firstTakeCountDownTime + Constants.firstRecordTimeLimit - Constants.firstRecordTimeWarningLimit,
-                                  execute: maxRecordLimitDispatchItem!)
+                                  execute: maxRecordLimitDispatchItem!) // swiftlint:disable:this force_unwrapping
     let recordButtonUpdateTimeInterval = firstTakeCountDownTime
 
     recordActionViewController.updateRecordButtons(state: .waitingToRecord)
@@ -210,7 +210,7 @@ class InitialRecordViewController: UIViewController {
       self.recordActionViewController.updateRecordButtons(state: .recording)
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + recordButtonUpdateTimeInterval,
-                                  execute: recordButtonUpdateDispatchItem!)
+                                  execute: recordButtonUpdateDispatchItem!) // swiftlint:disable:this force_unwrapping
     creationRecordViewController?.startRecording()
   }
 

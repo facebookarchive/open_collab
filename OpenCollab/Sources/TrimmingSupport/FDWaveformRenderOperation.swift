@@ -153,6 +153,7 @@ public final class FDWaveformRenderOperation: Operation {
 
     var channelCount = 1
     var sampleRate: CMTimeScale = 44100
+    // swiftlint:disable:next force_cast
     let formatDescriptions = audioContext.assetTrack.formatDescriptions as! [CMAudioFormatDescription]
     for item in formatDescriptions {
       guard let fmtDesc = CMAudioFormatDescriptionGetStreamBasicDescription(item) else { return nil }

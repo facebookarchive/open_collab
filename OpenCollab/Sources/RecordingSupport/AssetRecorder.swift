@@ -31,6 +31,7 @@ class AssetRecorder: NSObject {
                 realTime: Bool = true,
                 shouldOffsetAudio: Bool = true) {
     let outputFileName = NSUUID().uuidString
+    // swiftlint:disable:next force_unwrapping
     let stringPath = (NSTemporaryDirectory() as NSString).appendingPathComponent((outputFileName as NSString).appendingPathExtension("mov")!)
     self.url = URL(fileURLWithPath: stringPath)
     self.assetWidth = assetWidth
@@ -255,7 +256,7 @@ class AssetRecorder: NSObject {
                                           outputSettings: nil)
     audioWriterInput?.expectsMediaDataInRealTime = realTime
 
-    addWriterInput(input: audioWriterInput!)
+    addWriterInput(input: audioWriterInput!) // swiftlint:disable:this force_unwrapping
   }
 
   private func setupVideoWriterInput() {
@@ -269,7 +270,7 @@ class AssetRecorder: NSObject {
                                           outputSettings: videoSettings)
     videoWriterInput?.expectsMediaDataInRealTime = realTime
 
-    addWriterInput(input: videoWriterInput!)
+    addWriterInput(input: videoWriterInput!) // swiftlint:disable:this force_unwrapping
   }
 
   private func addWriterInput(input: AVAssetWriterInput) {

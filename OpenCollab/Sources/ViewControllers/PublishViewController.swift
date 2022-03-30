@@ -31,7 +31,7 @@ class PublishViewController: UIViewController {
 
   fileprivate lazy var unmuteView: UILabel =
     UINib(nibName: "UnmuteView", bundle: nil)
-      .instantiate(withOwner: nil, options: nil)[0] as! UILabel
+      .instantiate(withOwner: nil, options: nil)[0] as! UILabel // swiftlint:disable:this force_cast
 
   fileprivate let saveButton: UIButton = {
     let button = UIButton(type: .custom)

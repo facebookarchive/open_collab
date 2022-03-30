@@ -44,7 +44,7 @@ class CreationLaunchScreenViewController: UIViewController {
   @objc func didTapSettings(_ sender: Any) {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let settingsViewController = storyboard
-      .instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+      .instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController // swiftlint:disable:this force_cast
     self.navigationController?.pushViewController(settingsViewController, animated: true)
   }
 }

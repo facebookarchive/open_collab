@@ -34,7 +34,7 @@ import UIKit
 
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let creationLaunchScreenViewController = storyboard
-      .instantiateViewController(withIdentifier: "CreationLaunchScreen") as! CreationLaunchScreenViewController
+      .instantiateViewController(withIdentifier: "CreationLaunchScreen") as! CreationLaunchScreenViewController // swiftlint:disable:this force_cast
 
     let navViewController = UINavigationController(rootViewController: creationLaunchScreenViewController)
     navViewController.modalPresentationStyle = .fullScreen
@@ -98,7 +98,7 @@ import UIKit
 
   fileprivate func warnOfLowSpace() {
     if let window = self.window {
-      Alert.show(in: window.rootViewController!,
+      Alert.show(in: window.rootViewController!, // swiftlint:disable:this force_unwrapping
                  title: "Low Disk Space",
                  message: "Please free up space on your device to be able to use this app")
     }

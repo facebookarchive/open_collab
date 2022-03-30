@@ -177,7 +177,7 @@ class PlaybackCoordinator: NSObject {
   }
 
   // MARK: - KVO
-  // swiftlint:disable block_based_kvo
+  // swiftlint:disable:next block_based_kvo
   override public func observeValue(
     forKeyPath keyPath: String?,
     of object: Any?,
@@ -224,7 +224,7 @@ extension PlaybackCoordinator {
         }
       }
       self.coordinatedLooperGroup = CoordinatedLooperGroup(loopers: playerLoopers)
-      self.hotLooper.attach(looper: self.coordinatedLooperGroup!)
+      self.hotLooper.attach(looper: self.coordinatedLooperGroup!) // swiftlint:disable:this force_unwrapping
       promise.complete(.success(true))
     }.onFailure {_ in
       promise.complete(.success(false))

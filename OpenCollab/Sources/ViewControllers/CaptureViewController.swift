@@ -67,7 +67,7 @@ class CaptureViewController: UIViewController {
   private let sampleBufferQueue = DispatchQueue(label: "com.openCollab.sampleBufferQueue")
   private let sessionQueue: DispatchQueue
   private var setupResult: SessionSetupResult = .undetermined
-  // swiftlint:disable implicitly_unwrapped_optional
+  // swiftlint:disable:next implicitly_unwrapped_optional
   @objc dynamic var videoDeviceInput: AVCaptureDeviceInput!
   private let videoDeviceDiscoverySession =
     AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInUltraWideCamera,
@@ -77,6 +77,7 @@ class CaptureViewController: UIViewController {
                                      mediaType: .video, position: .unspecified)
   private var photoSettings: AVCapturePhotoSettings {
     let settings = AVCapturePhotoSettings()
+    // swiftlint:disable:next force_unwrapping
     let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
     let previewFormat = [
       kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
@@ -456,6 +457,7 @@ class CaptureViewController: UIViewController {
               }
               DispatchQueue.main.async {
                 let videoPreviewLayerOrientation = self.previewView.videoPreviewLayer.connection?.videoOrientation
+                // swiftlint:disable:next force_unwrapping
                 connection.videoOrientation = videoPreviewLayerOrientation!
               }
               if connection.isVideoMirroringSupported {

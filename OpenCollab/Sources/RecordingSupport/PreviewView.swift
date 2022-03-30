@@ -23,6 +23,7 @@ class PreviewView: UIView {
   }
 
   var videoPreviewLayer: AVCaptureVideoPreviewLayer {
+    // swiftlint:disable:next force_cast
     return layer as! AVCaptureVideoPreviewLayer
   }
 

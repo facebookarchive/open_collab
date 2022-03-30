@@ -6,10 +6,10 @@
 import Foundation
 
 class DimmablePresentationController: UIPresentationController {
-  // swiftlint:disable implicitly_unwrapped_optional
+  // swiftlint:disable:next implicitly_unwrapped_optional
   private var dimmingView: UIView!
   var containerHeight: CGFloat
-  // swiftlint:disable implicitly_unwrapped_optional
+  // swiftlint:disable:next implicitly_unwrapped_optional
   let disableSwipe: Bool!
 
   init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, height: CGFloat, disableSwipe: Bool = false) {
@@ -80,9 +80,9 @@ class DimmablePresentationController: UIPresentationController {
   override var frameOfPresentedViewInContainerView: CGRect {
     var frame: CGRect = .zero
     frame.size = size(forChildContentContainer: presentedViewController,
-                      withParentContainerSize: containerView!.bounds.size)
+                      withParentContainerSize: containerView!.bounds.size) // swiftlint:disable:this force_unwrapping
 
-    frame.origin.y = containerView!.frame.height - containerHeight
+    frame.origin.y = containerView!.frame.height - containerHeight // swiftlint:disable:this force_unwrapping
     return frame
   }
 }

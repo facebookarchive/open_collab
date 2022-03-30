@@ -194,11 +194,11 @@ class RemixViewController: UIViewController {
 
   fileprivate lazy var unmuteView: UILabel =
     UINib(nibName: "UnmuteView", bundle: nil)
-      .instantiate(withOwner: nil, options: nil)[0] as! UILabel
+      .instantiate(withOwner: nil, options: nil)[0] as! UILabel // swiftlint:disable:this force_cast
 
   fileprivate lazy var singleClipInvalidView: UILabel =
     UINib(nibName: "SingleClipInvalidView", bundle: nil)
-      .instantiate(withOwner: nil, options: nil)[0] as! UILabel
+      .instantiate(withOwner: nil, options: nil)[0] as! UILabel // swiftlint:disable:this force_cast
 
   let previewButton: UIButton = {
     let btn = UIButton(type: .custom)
@@ -1226,7 +1226,7 @@ extension RemixViewController {
       self.updateRecordButtonsStates(state: .recording)
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + Constants.timerLimit,
-                                  execute: recordButtonUpdateDispatchItem!)
+                                  execute: recordButtonUpdateDispatchItem!) // swiftlint:disable:this force_unwrapping
     creationRecordViewController?.startRecording()
   }
 

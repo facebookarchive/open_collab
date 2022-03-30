@@ -29,7 +29,7 @@ extension UIImage {
     let translucentImage = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
 
-    return translucentImage!
+    return translucentImage! // swiftlint:disable:this force_unwrapping
   }
 }
 
