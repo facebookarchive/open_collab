@@ -41,7 +41,7 @@ class LocalAssetManager: NSObject {
     switch assetInfo {
     case .empty:
       return Future(value: nil)
-    case .downloadedFragment(let downloadedFragment):
+    case .downloadedFragment:
         // ## TODO : Build in a way to import assets from outside the app
         //      return getDownloadedAsset(fragment: downloadedFragment).flatMap { (_, asset) in
         //                                  return Future(value: asset)

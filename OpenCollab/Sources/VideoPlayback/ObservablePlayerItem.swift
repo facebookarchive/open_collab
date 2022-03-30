@@ -82,6 +82,7 @@ open class ObservablePlayerItem: AVPlayerItem {
     }
   }
 
+  // swiftlint:disable block_based_kvo
   override public func observeValue(forKeyPath keyPath: String?,
                                     of object: Any?,
                                     change: [NSKeyValueChangeKey: Any]?,

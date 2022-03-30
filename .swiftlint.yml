@@ -24,9 +24,7 @@ only_rules:
     - empty_parentheses_with_trailing_closure
     - explicit_init
     - file_name_no_space
-    - force_cast
     - force_try
-    - force_unwrapping
     - implicitly_unwrapped_optional
     - inert_defer
     - is_disjoint
@@ -71,11 +69,4 @@ only_rules:
 
 excluded:
     - Pods/
-
-# override default severity
-force_unwrapping:
-  severity: error
-
-implicitly_unwrapped_optional:
-  severity: error
 

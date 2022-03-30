@@ -90,11 +90,11 @@ class AppMuteManager {
   }
 
   fileprivate func getHardwareState() -> MuteState? {
-    var state: UInt64 = 0
-
     // ## TODO : get mute state and return nil if it's not valid
-
-    return (state == 0) ? MuteState.Muted : MuteState.NotMuted
+    // var state: UInt64 = 0
+    // ...
+    // return (state == 0) ? MuteState.Muted : MuteState.NotMuteds
+    return MuteState.Muted
   }
 
   fileprivate func didChange() {

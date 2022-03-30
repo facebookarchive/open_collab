@@ -7,7 +7,7 @@ import BrightFutures
 import CoreMedia
 import UIKit
 
-protocol FragmentCreationViewControllerDelegate: NSObject {
+protocol FragmentCreationViewControllerDelegate: AnyObject {
   func select(viewController: FragmentCreationViewController, type: FragmentCreationViewController.SelectionType)
   func fragmentVolumeChanged(fragment: FragmentHost, volume: Float)
   func fragmentPlaybackChanged(fragment: FragmentHost,

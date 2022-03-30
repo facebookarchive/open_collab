@@ -177,6 +177,7 @@ class PlaybackCoordinator: NSObject {
   }
 
   // MARK: - KVO
+  // swiftlint:disable block_based_kvo
   override public func observeValue(
     forKeyPath keyPath: String?,
     of object: Any?,
@@ -366,7 +367,7 @@ extension PlaybackCoordinator {
 
   fileprivate func updateToken(_ viewHash: Int) {
     assert(Thread.isMainThread, "should be called on main thread")
-    attachDetachTokens[viewHash] = arc4random()
+    attachDetachTokens[viewHash] = UInt32.random(in: 0..<UInt32.max)
   }
 
   fileprivate func canBeAttached(asset: AVAsset, fragmentId: String) -> Bool {

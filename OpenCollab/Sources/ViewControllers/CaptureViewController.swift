@@ -67,6 +67,7 @@ class CaptureViewController: UIViewController {
   private let sampleBufferQueue = DispatchQueue(label: "com.openCollab.sampleBufferQueue")
   private let sessionQueue: DispatchQueue
   private var setupResult: SessionSetupResult = .undetermined
+  // swiftlint:disable implicitly_unwrapped_optional
   @objc dynamic var videoDeviceInput: AVCaptureDeviceInput!
   private let videoDeviceDiscoverySession =
     AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInUltraWideCamera,

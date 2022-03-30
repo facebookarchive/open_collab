@@ -6,8 +6,10 @@
 import Foundation
 
 class DimmablePresentationController: UIPresentationController {
+  // swiftlint:disable implicitly_unwrapped_optional
   private var dimmingView: UIView!
   var containerHeight: CGFloat
+  // swiftlint:disable implicitly_unwrapped_optional
   let disableSwipe: Bool!
 
   init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, height: CGFloat, disableSwipe: Bool = false) {

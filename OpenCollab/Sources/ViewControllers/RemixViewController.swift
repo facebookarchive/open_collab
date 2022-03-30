@@ -47,7 +47,7 @@ class RemixViewController: UIViewController {
   }
 
   // Init Properties
-  fileprivate var creationSessionToken = arc4random()
+  fileprivate var creationSessionToken = UInt32.random(in: 0..<UInt32.max)
   fileprivate var sessionIntervalToken: AnyHashable?
   fileprivate var layoutEngine = LayoutEngineViewController(useMargins: true)
   fileprivate var playbackData: PlaybackDataModel

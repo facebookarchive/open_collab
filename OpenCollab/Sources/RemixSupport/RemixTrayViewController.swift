@@ -5,7 +5,7 @@
 
 import UIKit
 
-protocol RemixTrayViewControllerDelegate: NSObject {
+protocol RemixTrayViewControllerDelegate: AnyObject {
   func didSelectClip(index: Int)
 }
 

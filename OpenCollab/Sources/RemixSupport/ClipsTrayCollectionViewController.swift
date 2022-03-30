@@ -7,7 +7,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-protocol ClipsTrayCollectionViewControllerDelegate: NSObject {
+protocol ClipsTrayCollectionViewControllerDelegate: AnyObject {
   func didSelectClip(index: Int)
 }
 

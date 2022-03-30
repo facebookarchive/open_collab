@@ -28,7 +28,7 @@ class GradientLoadingView: UIView {
     for i in 0..<Constants.gradientColors.count - 1 {
       gradientSet.append([Constants.gradientColors[i], Constants.gradientColors[i + 1]])
     }
-    currentGradient = Int(arc4random()) % gradientSet.count
+    currentGradient = Int.random(in: 0..<gradientSet.count)
 
     gradient.colors = gradientSet[currentGradient]
     gradient.startPoint = Constants.gradientStartPosition
