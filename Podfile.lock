@@ -1,0 +1,28 @@
+PODS:
+  - BrightFutures (8.1.0)
+  - FlexLayout (1.3.23)
+  - Kingfisher (7.1.2)
+  - SwiftLint (0.47.0)
+
+DEPENDENCIES:
+  - BrightFutures (~> 8.0)
+  - FlexLayout
+  - Kingfisher (~> 7.0)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - BrightFutures
+    - FlexLayout
+    - Kingfisher
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  BrightFutures: 6a974d08b121658dc0e6b93f5dec5353f9c24a44
+  FlexLayout: 5b44c0538e7eaa2110e3160dfdfb74611676fb91
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  SwiftLint: d41cc46a2ae58ac6d9f26954bc89f1d72e71fdef
+
+PODFILE CHECKSUM: 12a272d7ecdc3516e9203de244ba9c2c0d10c439
+
+COCOAPODS: 1.11.3
