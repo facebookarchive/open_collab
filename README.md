@@ -7,7 +7,7 @@ synchronization tools to simplify creating a multi-clip music video.
 
 Based off of the original [Collab app by NPE](https://madewithcollab.com/).
 
-**This repo will be maintained until July 1, 2022 at which point it will be made read-only**. Our hope is that developers interested in supporting this project over a longer term will fork the repo.
+**This repo will be maintained until August 1, 2022 at which point it will be made read-only**. Our hope is that developers interested in supporting this project over a longer term will fork the repo.
 
 ## Requirements
 OpenCollab requires or works with
