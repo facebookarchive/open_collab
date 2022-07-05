@@ -21,7 +21,9 @@ OpenCollab requires or works with
 * To run on a device, you may need to manipulate code signing settings in the project's _Signing & Capabilities_ settings.
 
 ## How OpenCollab works
-**TODO: demo video**
+
+https://user-images.githubusercontent.com/4399618/177393526-9cb1cf60-8860-4df0-8bbd-364aa4960dd0.mp4
+
 OpenCollab allows you to record a music video consisting of up to 6 videos stitched together. It provides several features that make recording music on your iPhone a snap:
 * Support for external interfaces (e.g., Roland GoMixer Pro) and wireless headphones (e.g. Airpods)
 * Record multiple takes and select your favorite one
